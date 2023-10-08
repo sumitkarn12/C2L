@@ -2,17 +2,32 @@
   <div style="max-width: 1024px; margin: 0 auto;">
     
     <footer class="w3-row">
-      <div class="w3-col s12 m6 w3-container w3-padding">
+      <div class="w3-col s12 m3 w3-container w3-padding">
         <div class="w3-center">
           <img src="https://i.ibb.co/HGPnVYs/c2l-logo.png" class="w3-round" style="height: 182px;" alt="c2l">
         </div>
         <p>C2L helps seller to grow their online presence along with improved sales.</p>
       </div>
-      <div class="w3-col s12 m6 w3-container w3-padding">
+      <div class="w3-col s12 m5 w3-container w3-padding">
+        <div class="wrapper">
+          <div class="header">
+            <h1>Subscribe</h1>
+            <p>Latest update to your inbox</p>
+          </div>
+          <div class="footer">
+            <form name="newsletter" netlify>
+              <input type="email" placeholder="Enter your email here"/>
+            </form>
+            <button class="btn-submit">submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col s12 m4 w3-container w3-padding">
         <h3>Contact</h3>
         <p>Begin your simplified and efficient online selling journey in the UAE with C2L.</p>
-        <p> 📧: <a href="mailto:info@c2l.asia">info@c2l.asia</a></p>
-        <p> 🗺: Dubai, United Arab Emirates</p>
+        <p>📧 <a href="mailto:info@c2l.asia">info@c2l.asia</a></p>
+        <p>📞 <a href="tel:+971502767027">+971 502 767 027</a></p>
+        <p>🗺 Dubai, United Arab Emirates</p>
         <p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
       </div>
     </footer>
