@@ -5,14 +5,27 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }} || c2l.asia</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-	{{ with .OutputFormats.Get "rss" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-	{{ end -}}
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/6521940ceb150b3fb99f1886/1hc5ikkn3';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
 
 </head>
 
@@ -20,4 +33,3 @@
 
 {{ partial "nav.html" . }}
 
-<main class="content">
