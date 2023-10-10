@@ -4,84 +4,41 @@ body {
   color: #333;
   margin: 0 auto;
   overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
-
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Poppins', sans-serif;
+}
+.desktop-width {
+  max-width: 1024px;
+  margin: auto;
+}
+.main-landing-page {
+  width: 100%;
+  background-image: url(//i.ibb.co/41FtsVT/brooke-cagle-WHWYBmtn3-0-unsplash.webp);
+  background-color: #333;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: soft-light;
+}
+.solutions .card {
+ overflow: hidden;
+}
+.solutions .card img {
+  width: 100%;
+ }
 .challenges .w3-card {
   min-height: 370px;
 }
 .challenges .w3-card .w3-container {
   min-height: 90px;
 }
-.partnerships .w3-theme-d5 {
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: multiply;
+.partnerships .card {
+  min-height: 260px;
+  overflow: hidden;
 }
 .platforms img {
   width: 120px;
   height: 120px;
-}
-
-.wrapper {
-  margin: auto;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
-}
-.header {
-  padding: 25px 25px 100px 25px;
-  min-height: 150px;
-  background: url("https://cdn0.iconfinder.com/data/icons/elpis/144/Newsletter-128.png") no-repeat center 85px;
-}
-.header h1 {
-  color: #536a89;
-  text-transform: uppercase;
-  font-size: 22px;
-  letter-spacing: 4px;
-}
-.header p {
-  font-size: 13px;
-  color: rgb(80, 85, 230);
-}
-.footer {
-  display: flex;
-  justify-content: space-between;
-}
-.footer form {
-  flex-grow: 1;
-  display: flex;
-}
-.footer input {
-  background: #e0e5ec;
-  border: none;
-  padding: 8px 16px;
-  flex-grow: 1;
-  color: #5c7698;
-}
-.footer input::-webkit-input-placeholder {
-  color: rgba(92,118,152,0.7);
-  text-transform: uppercase;
-}
-.footer input:focus {
-  outline: none;
-}
-.footer .btn-submit {
-  background: #c6cfdc;
-  border: none;
-  padding: 20px;
-  flex-grow: 1;
-  color: #5c7698;
-  font-weight: 700;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
-}
-.footer .btn-submit:focus {
-  outline: none;
 }

@@ -1,34 +1,42 @@
 
-  <div style="max-width: 1024px; margin: 0 auto;">
+  <div class="desktop-width" style="overflow: hidden;    background-color: #0e2954; border-radius: 20px 20px 0 0;">
     
     <footer class="w3-row">
-      <div class="w3-col s12 m3 w3-container w3-padding">
-        <div class="w3-center">
-          <img src="https://i.ibb.co/HGPnVYs/c2l-logo.png" class="w3-round" style="height: 182px;" alt="c2l">
-        </div>
-        <p>C2L helps seller to grow their online presence along with improved sales.</p>
-      </div>
-      <div class="w3-col s12 m5 w3-container w3-padding">
-        <div class="wrapper">
-          <div class="header">
-            <h1>Subscribe</h1>
-            <p>Latest update to your inbox</p>
-          </div>
-          <div class="footer">
-            <form name="newsletter" netlify>
-              <input type="email" placeholder="Enter your email here" name="email" autocomplete="on" required/>
-            </form>
-            <button class="btn-submit">submit</button>
-          </div>
-        </div>
-      </div>
       <div class="w3-col s12 m4 w3-container w3-padding">
-        <h3>Contact</h3>
-        <p>Begin your simplified and efficient online selling journey in the UAE with C2L.</p>
-        <p>📧 <a href="mailto:info@c2l.asia">info@c2l.asia</a></p>
-        <p>📞 <a href="tel:+971502767027">+971 502 767 027</a></p>
-        <p>🗺 Dubai, United Arab Emirates</p>
-        <p>&copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
+        <form action="#" method="post" netlify>
+          <h4 class="w3-text-white">Signup our newsletter</h4>
+          <div class="w3-display-container">
+            <input class="w3-round-xxlarge w3-large w3-input" style="width: 100%;" type="email" name="email" placeholder="Enter your email here" autocomplete="on" required />
+            <div class="w3-display-right">
+              <button class="w3-button w3-circle w3-theme-l5 w3-xxlarge w3-card"><i class="fa fa-check"></i></button>
+            </div>
+          </div>
+        </form>
+      
+        <p class="w3-text-white">
+          📧 <a href="mailto:info@c2l.asia">info@c2l.asia</a><br>
+          📞 <a href="tel:+971502767027">+971 502 767 027</a><br>
+          🗺 Dubai, United Arab Emirates <br>
+          &copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
+
+      </div>
+
+      <div class="w3-col s12 m4 w3-container w3-padding w3-text-white">
+        <h4 class="w3-text-white">Links</h4>
+        <a href="/" target="_blank" rel="noopener noreferrer">Noon account management</a><br>
+        <a href="/" target="_blank" rel="noopener noreferrer">Amazon account management</a><br>
+        <a href="/" target="_blank" rel="noopener noreferrer">About us</a><br>
+        <a href="/" target="_blank" rel="noopener noreferrer">Contact us</a><br>
+        <a href="/" target="_blank" rel="noopener noreferrer">Our team</a>
+      </div>
+
+      <div class="w3-col s12 m4">
+        <div style="background-image: url(https://i.ibb.co/HGPnVYs/c2l-logo.png);
+        background-position: center;
+        height: 150px;
+        width: 100%;
+        background-size: cover;"></div>
+        <p class="w3-text-white w3-container">C2L helps seller to grow their online presence along with improved sales. Begin your simplified and efficient online selling journey in the UAE with C2L.</p>
       </div>
     </footer>
     
