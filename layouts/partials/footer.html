@@ -1,9 +1,33 @@
 
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card w3-animate-zoom w3-round" style="max-width:600px; overflow: hidden;">
+      <div class="w3-container w3-theme">
+          <h4>Path to grow</h4>
+      </div>
+      <form action="#" method="post" name="lead">
+          <div class="w3-section w3-container">
+              <label><b>Name</b></label>
+              <input class="w3-input w3-round w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
+              <label><b>Mobile number</b></label>
+              <input class="w3-input w3-round w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
+              <label><b>Email id</b></label>
+              <input class="w3-input w3-round w3-border" type="email" placeholder="Enter your email" name="email" required>
+          </div>
+          <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+              <button class="w3-button w3-round w3-theme w3-right" type="submit">Submit</button>
+              <button onclick="document.getElementById('id01').style.display='none'" type="reset" class="w3-margin-right w3-button w3-theme-l4 w3-round w3-right">Not interested</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+
   <div class="desktop-width" style="overflow: hidden;    background-color: #0e2954; border-radius: 20px 20px 0 0;">
     
     <footer class="w3-row">
       <div class="w3-col s12 m4 w3-container w3-padding">
-        <form action="#" method="post" netlify>
+        <form action="#" method="post" name="newsletter">
           <h4 class="w3-text-white">Signup our newsletter</h4>
           <div class="w3-display-container">
             <input class="w3-round-xxlarge w3-large w3-input" style="width: 100%;" type="email" name="email" placeholder="Enter your email here" autocomplete="on" required />
@@ -52,6 +76,38 @@
       }
     });
   }
+
+  document.querySelector( "form[name=newsletter]" ).addEventListener( 'submit', ev => {
+    ev.preventDefault();
+    ev.target.querySelector( "button" ).innerHTML = "<i class='fa fa-refresh'></i>"
+    let email = ev.target.querySelector( "input" ).value;
+    fetch( "https://chat.thespj.workers.dev/newsletter", {
+      method:"POST",
+      body: JSON.stringify({"email": email})
+    }).catch( console.error ).finally( r =>{
+      setTimeout( ()=> {
+        ev.target.querySelector( "button" ).innerHTML = "<i class='fa fa-check'></i>"
+      }, 1500)
+    })
+    return false;
+  });
+
+  document.querySelector( "form[name=lead]" ).addEventListener( 'submit', ev => {
+    ev.preventDefault();
+    ev.target.querySelector( "button[type=submit]" ).innerHTML = "<i class='fa fa-refresh'></i>"
+    let email = ev.target.querySelector( "input[name=email]" ).value;
+    let name = ev.target.querySelector( "input[name=name]" ).value;
+    let mobile = ev.target.querySelector( "input[name=mobile]" ).value;
+    fetch( "https://chat.thespj.workers.dev/lead", {
+      method:"POST",
+      body: JSON.stringify({ "email": email, "name": name, "mobile": mobile })
+    }).catch( console.error ).finally( r =>{
+      setTimeout( ()=> {
+        ev.target.querySelector( "button[type=submit]" ).innerHTML = "Submit"
+      }, 1500)
+    })
+    return false;
+  });
 </script>
 
 </body>

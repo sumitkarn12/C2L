@@ -1,4 +1,4 @@
 ---
-title: "Noon Account Management - C2L"
+title: "Noon Account Management"
 ---
 

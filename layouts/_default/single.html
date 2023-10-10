@@ -11,8 +11,10 @@
 	<img src="{{ .Params.image }}" >
 {{ end }}
 
-<div class="desktop-width">
-	<p>{{ .Content }}</p>
+<div class="desktop-width w3-padding-16">
+    <div class="w3-container w3-round-xlarge w3-theme-l5">
+        <p>{{ .Content }}</p>
+    </div>
 </div>
 
 {{ partial "footer.html" . }}

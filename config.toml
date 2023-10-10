@@ -5,20 +5,19 @@ title = "C2L - Come to life"
 
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 20
-
-  [[menu.main]]
     identifier = "services"
     name = "Services"
     url = "/services"
-    weight = 30
+    weight = 20
 
+  [[menu.main]]
+    identifier = "others"
+    name = "Others"
+    url = "/others"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 30

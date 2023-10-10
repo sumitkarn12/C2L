@@ -1,4 +1,4 @@
 ---
-title: "Amazon Account Management - C2L"
+title: "Amazon Account Management"
 ---
 
