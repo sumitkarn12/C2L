@@ -2,4 +2,5 @@
 title: "About"
 ---
 
-Here's a bit about me.
+C2L stands for Come to life.
+

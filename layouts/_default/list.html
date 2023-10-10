@@ -1,18 +1,27 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title }}</h1>
+<section class="main-landing-page">
+  <div class="desktop-width" style="padding: 120px 22px; color: #fff;">
+      <h2 style="line-height: 1.2;" class="w3-center">{{ .Title }}</h2>
+  </div>
+</section>
 
-{{ .Content }}
+<section>
+  <div class="desktop-width">
+    <p>
+      {{ .Content }}
+    </p>
+    {{ range.Data.Pages }}
+    <article class="w3-container">
+      <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+    </article><hr>
+    {{ end }}
+  </div>
+</section>
 
-{{ range.Data.Pages }}
-<article class="post-snippet">
-  <h3>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  </h3>
-	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-		{{ .Date.Format "January 2, 2006" }}
-	</time>
-</article>
-{{ end }}
+
 
 {{ partial "footer.html" . }}

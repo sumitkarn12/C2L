@@ -15,3 +15,10 @@ title = "C2L - Come to life"
     name = "About"
     url = "/about"
     weight = 20
+
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services"
+    weight = 30
+
