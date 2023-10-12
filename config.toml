@@ -1,4 +1,5 @@
-title = "C2L - Come to life"
+title = "C2L - Come to life || An eComm marketplace management service provider"
+enableRobotsTXT = true
 [params]
   name = "C2L"
   logo = "/images/c2l_icon.webp"

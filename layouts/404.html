@@ -1,9 +1,51 @@
 {{ partial "header.html" . }}
 
-<h1>Page Not Found</h1>
 
-<p>This page doesn't exist.</p>
+<section class="main-landing-page">
+    <div class="desktop-width" style="padding: 120px 22px; color: #fff;">
+        <h1 style="line-height: 1.2;" class="w3-center w3-xlarge">
+            Uh oh! Something is wrong
+        </h1>
+    </div>
+</section>
 
-<p><a href="/">Go back to the home page</a></p>
+<br>
+
+<div class="desktop-width w3-container">
+    <div class="w3-row">
+        <div class="w3-col s12 m8 w3-container w3-round-xlarge w3-theme-l5" style="margin-bottom: 16px;">
+            <h2 class="w3-large w3-text-theme">Why don't you signup our free weekly newsletter.</h2>
+            <p>Grow your online business like a funky disco ball, with full of hot tips and tricks!</p>
+            <p><b>Pro tip:</b> We don't spam 😉</p>
+            <form action="#" name="newsletter" method="POST">
+                <label for="name">Name</label>
+                <input type="text" class="w3-input w3-round-large w3-margin-bottom" name="name" id="name" placeholder="Your name" required />
+                <label for="name">Email</label>
+                <input type="email" class="w3-input w3-round-large w3-margin-bottom" name="email" id="email" placeholder="Your email" required />
+                <button class="w3-button w3-round-large w3-theme"><i class='fa fa-check'></i></button>
+                <p style="display: none;" id="alert" class="w3-round-xlarge w3-padding w3-container w3-theme-l4">That's great. We'll keep you posted.</p>
+            </form>
+            <br>
+        </div>
+        <div class="w3-col s12 m4 w3-container">
+            <div class="w3-container w3-theme-l5 w3-round-xlarge">
+                <h4>Book a free consultation</h4>
+            </div>
+            <br>
+            <form action="#" method="post" name="lead">
+                <label><b>Name</b></label>
+                <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
+                <label><b>Mobile number</b></label>
+                <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
+                <label><b>Email id</b></label>
+                <input class="w3-input w3-round-large w3-border" type="email" placeholder="Enter your email" name="email" required>
+                <br>
+                <button class="w3-button w3-round-large w3-theme" style="width: 100%;" type="submit">Submit</button>
+                <p id="alert" style="display: none;" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been submitted and we'll get in touch with you shortly.</p>
+            </form>
+        </div>
+    </div>
+    <br>
+</div>
 
 {{ partial "footer.html" . }}
