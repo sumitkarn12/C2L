@@ -77,13 +77,23 @@
     });
   }
 
+
+
+  function getUUID() {
+    let uuid = localStorage.getItem( "uuid" );
+    if ( uuid === null || uuid.length != 36 ) {
+      uuid = crypto.randomUUID();
+    }
+    return uuid;
+  }
+
   document.querySelector( "form[name=newsletter]" ).addEventListener( 'submit', ev => {
     ev.preventDefault();
     ev.target.querySelector( "button" ).innerHTML = "<i class='fa fa-refresh'></i>"
     let email = ev.target.querySelector( "input" ).value;
-    fetch( "https://chat.thespj.workers.dev/newsletter", {
+    fetch( "https://c2l.thespj.workers.dev/newsletter", {
       method:"POST",
-      body: JSON.stringify({"email": email})
+      body: JSON.stringify({"email": email, uuid: getUUID() })
     }).catch( console.error ).finally( r =>{
       setTimeout( ()=> {
         ev.target.querySelector( "button" ).innerHTML = "<i class='fa fa-check'></i>"
@@ -98,9 +108,9 @@
     let email = ev.target.querySelector( "input[name=email]" ).value;
     let name = ev.target.querySelector( "input[name=name]" ).value;
     let mobile = ev.target.querySelector( "input[name=mobile]" ).value;
-    fetch( "https://chat.thespj.workers.dev/lead", {
+    fetch( "https://c2l.thespj.workers.dev/lead", {
       method:"POST",
-      body: JSON.stringify({ "email": email, "name": name, "mobile": mobile })
+      body: JSON.stringify({ "email": email, "name": name, "mobile": mobile, uuid: getUUID() })
     }).catch( console.error ).finally( r =>{
       setTimeout( ()=> {
         ev.target.querySelector( "button[type=submit]" ).innerHTML = "Submit"
@@ -111,4 +121,7 @@
 </script>
 
 </body>
+// Sumo email capture plugin
+<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='a4135a974fd1acd3645f5f9cda66a196468157591a69ae983030a93f2dba6a0e';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
+
 </html>
