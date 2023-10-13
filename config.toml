@@ -1,5 +1,7 @@
 title = "C2L - Come to life || An eComm marketplace management service provider"
 enableRobotsTXT = true
+baseURL = "https://c2l.asia/"
+
 [params]
   name = "C2L"
   logo = "/images/c2l_icon.webp"
