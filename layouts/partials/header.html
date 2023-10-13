@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+	<title>{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }} | Ecommerce management service provider{{ end }}</title>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-	<meta name="description" content="{{ .Description }}">
+	<meta name="description" content="{{ if not .IsHome }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
     <meta property="og:locale" content="en_AE">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ .Title }}">
-    <meta property="og:description" content="{{ .Description }}">
+    <meta property="og:description" content="{{ if not .IsHome }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:url" content="{{.Permalink}}">
-    <meta property="og:image" content="{{.Params.image.url}}">
+    <meta property="og:image" content="{{ if .Params.image.url }}{{.Params.image.url}}{{ else }}{{.Site.Params.logo}}{{ end }}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{.Title}}">
     <meta name="twitter:description" content="{{ .Description }}">
-    
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

@@ -6,13 +6,21 @@ body {
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Poppins', sans-serif;
 }
+
 .desktop-width {
   max-width: 1024px;
   margin: auto;
 }
+
 .main-landing-page {
   width: 100%;
   background-image: url(//i.ibb.co/41FtsVT/brooke-cagle-WHWYBmtn3-0-unsplash.webp);
@@ -22,23 +30,102 @@ h1,h2,h3,h4,h5,h6 {
   background-attachment: fixed;
   background-blend-mode: soft-light;
 }
-.solutions .card {
- overflow: hidden;
+
+.main-landing-page .desktop-width h1 {
+  line-height: 1.2;
 }
+
+.main-landing-page .desktop-width {
+  padding: 120px 22px;
+  color: #fff;
+}
+
+.main-page-header .desktop-width {
+  position: relative;
+  top: -40px;
+}
+
+.challenges .f82 {
+  font-size: 82px;
+}
+
+#alert {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 62px;
+  height: 62px;
+}
+
+#sidebar {
+  width: 320px;
+  display: none;
+}
+
+#sidebar p {
+  margin: 0;
+}
+
+.main-page-header img {
+  width: 256px;
+  height: 256px;
+}
+
+.solutions .card {
+  overflow: hidden;
+}
+
 .solutions .card img {
   width: 100%;
- }
+}
+
 .challenges .w3-card {
   min-height: 370px;
 }
+
 .challenges .w3-card .w3-container {
   min-height: 90px;
 }
+
 .partnerships .card {
   min-height: 260px;
   overflow: hidden;
 }
+
 .platforms img {
   width: 120px;
   height: 120px;
+}
+
+#id01 .w3-modal-content {
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.footer-wrapper {
+  overflow: hidden;
+  background-color: #0e2954;
+  border-radius: 20px 20px 0 0;
+}
+
+.c2l-footer-logo {
+  background-image: url(https://i.ibb.co/HGPnVYs/c2l-logo.png);
+  background-position: center;
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+}
+
+.blog-header-image {
+  position: relative; top: -45px; height: 286PX; width: 100%; overflow: hidden;
+}
+.blog-header-image img {
+  height: 286px; width: 786px;
 }
