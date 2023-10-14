@@ -29,25 +29,18 @@
     
     <footer class="w3-row">
       <div class="w3-col s12 m4 w3-container w3-padding">
-        <form action="#" method="post" name="newsletter">
-          <p class="w3-large w3-text-white">Signup our newsletter</p>
-          <div class="w3-display-container">
-            <input class="w3-round-xxlarge w3-large w3-input" type="email" name="email" placeholder="Enter your email here" autocomplete="on" required />
-            <div class="w3-display-right">
-              <button class="w3-button w3-circle w3-theme-l5 w3-xxlarge w3-card"><i class="fa fa-check"></i></button>
-            </div>
-          </div>
-          <p id="alert" class="w3-round-xlarge w3-padding w3-container w3-theme-l5">That's great. We'll keep you posted.</p>
+        <p class="w3-large w3-text-white">Signup our newsletter</p>
+        <form action="#" method="post" name="newsletter" class="w3-small w3-display-container">
+          <input class="w3-round-large w3-input" type="email" name="email" placeholder="Enter your email here" autocomplete="on" required />
+          <button class="w3-display-right w3-button w3-round-large w3-theme-d5"><i class="fa fa-check"></i> Signup</button>
         </form>
+        <p id="alert" class="w3-round-xlarge w3-padding w3-container w3-theme-l5">That's great. We'll keep you posted.</p>
       
-        <p class="w3-text-white">
-          📧 <a href="mailto:info@c2l.asia">info@c2l.asia</a><br>
-          📞 <a href="tel:+971502767027">+971 502 767 027</a><br>
-          🗺 Dubai, United Arab Emirates <br>
-          <span class="w3-small">
-            &copy;{{ dateFormat "2006" now }} {{ .Site.Title }}</p>
-          </span>
-
+        <p>
+          <div class="w3-text-white">📧 <a href="mailto:info@c2l.asia">info@c2l.asia</a></div>
+          <div class="w3-text-white">📞 <a href="tel:+971502767027">+971 502 767 027</a></div>
+          <div class="w3-text-white">🗺 Dubai, United Arab Emirates</div>
+        </p>
       </div>
 
       <div class="w3-col s12 m4 w3-container w3-padding w3-text-white">
@@ -55,10 +48,14 @@
   
         {{ range (.Site.Sections.ByWeight).Reverse }}
           {{ range .Pages }}
-            <a href="{{ .RelPermalink }}">{{.LinkTitle}}</a><br>
+            {{ if ne .Section "posts" }}
+              <a href="{{ .RelPermalink }}" class="w3-block">{{.LinkTitle}}</a>
+            {{ end }}
           {{ end }}
         {{ end }}
-    
+   
+        <a href="/posts" class="w3-margin-bottom">Blog</a>
+
       </div>
 
       <div class="w3-col s12 m4">
@@ -66,6 +63,14 @@
         <p class="w3-text-white w3-container w3-small">C2L helps seller to grow their online presence along with improved
           sales. Begin your simplified and efficient online selling journey in the UAE with C2L.</p>
       </div>
+
+
+      <div class="w3-col s12 w3-theme-d4 flex-center">
+          <p class="w3-small">
+            &copy;{{ dateFormat "2006" now }} {{ .Site.Title }}
+          </p>
+      </div>
+
     </footer>
     
   </div>
@@ -85,6 +90,7 @@
     let uuid = localStorage.getItem( "uuid" );
     if ( uuid === null || uuid.length != 36 ) {
       uuid = crypto.randomUUID();
+      localStorage.setItem( "uuid", uuid );
     }
     return uuid;
   }

@@ -7,7 +7,7 @@ image:
     alt: "A contact us section of C2L to get in touch"
 ---
 
-## Do you want to speak to us?
+# Would you like to speak to us?
 
 [📧 info@c2l.asia](//mailto:info@c2l.asia)
 

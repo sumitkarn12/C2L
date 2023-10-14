@@ -10,9 +10,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-	<link rel="shortcut icon" href="{{ ((resources.Get "c2l_logo.png").Resize "82x").RelPermalink }}" type="image/x-icon">
-
-	
+	<link rel="shortcut icon" href="{{ ((resources.Get "c2l_logo.png").Resize "96x").RelPermalink }}" type="image/x-icon">
 
 	<meta name="description" content="{{ if not .IsHome }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
@@ -30,6 +28,8 @@
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+	<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL}}index.xml" title="{{.Title}}">
+	
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -44,9 +44,30 @@
 	</script>
 	<!--End of Tawk.to Script-->
 
+
+	{{ if eq .Section "posts" }}
+    <script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "NewsArticle",
+		  "headline": "{{.Title}}",
+		  "image": [
+			"{{.Params.image.url}}"
+		   ],
+		  "datePublished": "{{.Date.Format "2006-01-02"}}"
+		}
+	</script>
+	{{ end }}
+    <script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"url": "{{.Site.BaseURL}}",
+			"logo": "{{ (resources.Get "c2l_logo.png").Permalink }}"
+		  }
+	</script>
 </head>
 
 <body>
 
 {{ partial "nav.html" . }}
-

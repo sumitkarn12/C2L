@@ -129,3 +129,21 @@ h6 {
 .blog-header-image img {
   height: 286px; width: 786px;
 }
+.breadcrumb {
+  list-style: none;
+  padding: 0;
+}
+.breadcrumb li {
+  display: inline;
+} 
+.breadcrumb li+li:before {
+  padding: 4px;
+  color: black;
+  content: "/\00a0";
+}
+.breadcrumb li a {
+  text-decoration: none;
+}
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}

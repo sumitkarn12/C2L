@@ -1,24 +1,24 @@
-<nav class="w3-bar w3-theme-l1 w3-top w3-card">
+<nav class="w3-bar w3-xlarge w3-theme-l1 w3-top w3-card">
   <a  rel="noopener noreferrer" class="w3-bar-item w3-button" onclick="document.getElementById('sidebar').style.display='block'"><i class="fa fa-bars"></i></a>
-  <a href="/" class="w3-bar-item w3-button">{{ .Site.Params.name }}</a>
-  <a onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-bar-item w3-right">Get a quote</a>
+  <img src="{{ .Site.Params.logo}}" class="w3-bar-item nav-logo" style="margin: 0; padding: 0; height: 52px;" alt="Logo of C2L" >
+  <a href="/" class="w3-bar-item w3-button w3-hide-small">{{ .Site.Params.name }}</a>
+  <a onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-bar-item w3-right">Know more</a>
 </nav>
-<div class="">
-  <a href="/" class="flex-center">
-    <img src="{{ .Site.Params.logo}}" class="w3-card w3-circle w3-top nav-logo" alt="Logo of C2L" >
-  </a>
-</div>
 
 <div id="sidebar" class="w3-sidebar w3-bar-block w3-animate-left">
   <span class="w3-display-topright w3-button w3-theme-d5" onclick="document.getElementById('sidebar').style.display='none'"><i class="fa fa-close"></i></span>
   <h3 class="w3-container"> {{ .Site.Params.name }} </h3>
   
-  {{ range (.Site.Sections.ByWeight).Reverse }}
-    <p class="w3-container w3-padding w3-theme-l5"><strong>{{.Title}}</strong></p>
-    {{ range .Pages }}
-      <a href="{{ .RelPermalink }}" class="w3-bar-item w3-button"><i class="fa fa-arrow-right"></i> {{.LinkTitle}}</a>
+  {{ range .Site.Sections.Reverse }}
+    {{ if ne .Section "posts"}}
+      <a href="{{ .RelPermalink }}" class="w3-theme-l5 w3-bar-item w3-button">{{.Title}}</a>
+      {{ range .Pages }}
+        <a href="{{ .RelPermalink }}" class="w3-bar-item w3-button"><i class="fa fa-arrow-right"></i> {{.LinkTitle}}</a>
+      {{ end }}
     {{ end }}
   {{ end }}
+
+  <a href="/posts" class="w3-bar-item w3-button"><i class="fa fa-arrow-right"></i> Blogs</a>
 
   <p class="w3-container w3-padding w3-theme-l5"><strong>Contact</strong></p>
   <a class="w3-bar-item w3-button" href="mailto:info@c2l.asia"><i class="fa fa-envelope"></i> info@c2l.asia</a>

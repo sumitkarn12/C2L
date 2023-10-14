@@ -6,22 +6,35 @@
   </div>
 </section>
 
-<section>
-  <div class="desktop-width">
-    <p>
-      {{ .Content }}
-    </p>
-    {{ range.Data.Pages }}
-    <article class="w3-container">
-      <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-        {{ .Date.Format "January 2, 2006" }}
-      </time>
-    </article><hr>
-    {{ end }}
-  </div>
-</section>
+<section class="desktop-width">
+    {{ .Content }}
 
+    <div class="w3-row w3-margin-top">
+      {{ range.Data.Pages }}
+        <div class="w3-col s12 m4 w3-padding">
+          <div class="w3-border w3-margin-bottom w3-round-xlarge">
+            <a href="{{ .RelPermalink }}">
+              <div class="w3-display-container">
+                <div class="w3-container w3-padding-16">
+                  <img src="{{ .Params.image.url }}" class="w3-card w3-round-large w3-block" alt="{{ .Params.image.alt }}">
+                </div>
+                <div class="w3-padding-16 w3-container w3-display-bottomleft">
+                  {{ if .Date }}
+                  <time class="w3-tag w3-theme w3-tiny w3-round-large" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                    {{ .Date.Format "January 2, 2006" }}
+                  </time>
+                  {{ end }}
+                </div>
+              </div>
+              <div class="w3-theme w3-container w3-round-xlarge">
+                <h1 class="w3-medium">{{ .Title | truncate 50 }}</h1>
+              </div>
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
 
+  </section>
 
 {{ partial "footer.html" . }}
