@@ -40,10 +40,9 @@
             <p>{{ .Content }}</p>
         </div>
         <div class="w3-col s12 m4 w3-container">
-            <div class="w3-container w3-theme-l5 w3-round-xlarge">
+            <div class="w3-container w3-theme-l5 w3-round-xlarge w3-margin-bottom">
                 <h4>Book a free consultation</h4>
             </div>
-            <br>
             <form action="#" method="post" name="lead">
                 <label><b>Name</b></label>
                 <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
@@ -55,6 +54,19 @@
                 <button class="w3-button w3-round-large w3-theme w3-block" type="submit">Submit</button>
                 <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been submitted and we'll get in touch with you shortly.</p>
             </form>
+            <div class="w3-padding-16">
+                <ul class="w3-ul w3-card w3-round-xlarge">
+                    <li class="w3-large w3-round-xlarge w3-card w3-theme-d5"><span>You should read these too</span></li>
+                    {{ $current_page := .RelPermalink }}
+                    {{ range where .Site.AllPages "Section" "posts" }}
+                        {{ if eq .Section "posts" }}
+                            {{ if .IsPage }}
+                                <li class="{{if eq $current_page .RelPermalink}}w3-hide{{end}}"><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
         </div>
     </div>
     <br>

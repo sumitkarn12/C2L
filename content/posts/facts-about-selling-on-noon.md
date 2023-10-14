@@ -7,11 +7,11 @@ image:
     alt: "A box of noon in a hand showing how to sell on noon"
 ---
 
-# Introduction
+## Introduction
 
 Seeking insights on how to sell on Noon? Look no further! As UAE's leading e-commerce platform, Noon provides vast avenues for business growth. From setting up your store to managing customer interactions, this guide will help you navigate the Noon marketplace effortlessly.
 
-## Starting with the Basics: Registration
+### Starting with the Basics: Registration
 
 The first step in understanding how to sell on Noon is registration.
 
@@ -23,7 +23,7 @@ The first step in understanding how to sell on Noon is registration.
 ***Make sure the details mentioned on each documents which you will provide at the time of onboarding should match exactly. Noon will reject the application if they find any small discrepency even there is difference of comma.***
 
 
-## Perfecting Product Listings
+### Perfecting Product Listings
 
 Knowing how to list products effectively is key when figuring out how to sell on Noon.
 
@@ -31,7 +31,7 @@ Knowing how to list products effectively is key when figuring out how to sell on
 - **Engaging Descriptions:** Make your products irresistible with punchy descriptions. A well described product has higher chance to appear on the top in customer search.
 - **Competitive Pricing:** Monitor the market and set attractive prices.
 
-## Mastering Order Management
+### Mastering Order Management
 
 To master how to sell on Noon, efficient order handling is essential:
 
@@ -39,14 +39,14 @@ To master how to sell on Noon, efficient order handling is essential:
 - **Swift Dispatch:** Regularly update your inventory and ship orders promptly.
 - **Handle Returns:** Always be aware of Noon's return policy to ensure customer satisfaction.
 
-## Navigating Payments
+### Navigating Payments
 
 Grasping the financial aspects is pivotal when learning how to sell on Noon:
 
 - **Weekly Settlements:** Noon generally processes payments every week.
 - **Monitor Transactions:** Keep an eye on your dashboard for any unusual activities.
 
-## Prioritizing Customer Service
+### Prioritizing Customer Service
 
 To truly excel in understanding how to sell on Noon, customer interactions must be top-notch:
 
@@ -59,9 +59,6 @@ To truly excel in understanding how to sell on Noon, customer interactions must 
 
 ### What's the duration of Noon's verification process?
 > Typically, it's within 48 hours, but sometime it may go to a week. Please do keep an eye out for any communications from Noon or periodically check [Seller Lab](https://login.noon.partners/en/).
-
-### Is there a cost to learn how to sell on Noon?
-> You don't need to pay for anything, however, Noon will charge based on their rate card on sold items or if you use their inventory on monthly or yearly basis.
 
 ### Is there a cost to learn how to sell on Noon?
 > You don't need to pay for anything, however, Noon will charge based on their rate card on sold items or if you use their inventory on monthly or yearly basis.
