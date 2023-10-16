@@ -4,7 +4,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }} | Ecommerce management service provider{{ end }}</title>
+	<title>{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,30 +17,30 @@
     <meta property="og:locale" content="en_AE">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta property="og:description" content="{{ if not .IsHome }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta property="og:url" content="{{.Permalink}}">
     <meta property="og:image" content="{{ if .Params.image.url }}{{.Params.image.url}}{{ else }}{{.Site.Params.logo}}{{ end }}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{.Title}}">
-    <meta name="twitter:description" content="{{ .Description }}">
+    <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ if not .IsHome }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 	<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL}}index.xml" title="{{.Title}}">
 	
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-	(function(){
-	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-	s1.async=true;
-	s1.src='https://embed.tawk.to/6521940ceb150b3fb99f1886/1hc5ikkn3';
-	s1.charset='UTF-8';
-	s1.setAttribute('crossorigin','*');
-	s0.parentNode.insertBefore(s1,s0);
-	})();
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+		s1.async=true;
+		s1.src='https://embed.tawk.to/6521940ceb150b3fb99f1886/1hc5ikkn3';
+		s1.charset='UTF-8';
+		s1.setAttribute('crossorigin','*');
+		s0.parentNode.insertBefore(s1,s0);
+		})();
 	</script>
 	<!--End of Tawk.to Script-->
 

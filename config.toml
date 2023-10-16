@@ -1,11 +1,11 @@
-title = "C2L - Come to life"
+title = "Seller Account Management Services: Grow Your E-Commerce Business"
 enableRobotsTXT = true
 baseURL = "https://c2l.asia/"
 
 [params]
   name = "C2L"
   logo = "/images/c2l_icon.webp"
-  description = "We are eCommerce management service provider so you can focus on important things which is your product."
+  description = "A provider of seller account management services. We help e-commerce sellers succeed on multiple platforms, including Amazon, Noon etc."
 
 [menu]
   [[menu.main]]
