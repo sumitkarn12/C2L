@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+
+<section class="main-landing-page">
+  <div class="desktop-width">
+      <h2 class="w3-center">{{ .Title }}</h2>
+  </div>
+</section>
+
+<section class="desktop-width">
+    {{ .Content }}
+
+    <div class="w3-row w3-margin-top blogs">
+      {{ range.Data.Pages }}
+        <div class="w3-col s12 w3-container w3-margin-bottom">
+          <a href="{{ .RelPermalink }}">
+            <div class="w3-card w3-round-xlarge" style="background-image: url({{ .Params.image.url }});">
+              <div class="w3-right w3-theme-l5 w3-container w3-padding-16">
+                {{ if .Date }}
+                <time class="w3-tag w3-theme w3-tiny w3-round-large" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                  {{ .Date.Format "January 2, 2006" }}
+                </time>
+                {{ end }}
+                <h1 class="w3-medium">{{ .Title }}</h1>
+              </div>
+            </div>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+
+  </section>
+
+{{ partial "footer.html" . }}
