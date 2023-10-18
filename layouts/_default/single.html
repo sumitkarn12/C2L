@@ -74,22 +74,22 @@
 
 <div class="shareit">
     <!-- facebook -->
-    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}" title="facebook"><i class="fa fa-facebook"></i></a>
+    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink | safeURL }}" title="facebook"><i class="fa fa-facebook"></i></a>
   
     <!-- twitter -->
-    <a class="twitter" href="https://twitter.com/intent/tweet?text={{.Title}}&url={{.Permalink}}" title="twitter"><i class="fa fa-twitter"></i></a>
+    <a class="twitter" href="https://twitter.com/intent/tweet?text={{.Title | safeURL }}&url={{.Permalink | safeURL }}" title="twitter"><i class="fa fa-twitter"></i></a>
   
     <!-- linkedin -->
-    <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink}}&title={{.Title}}" title="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink | safeURL }}&title={{.Title | safeURL }}" title="linkedin"><i class="fa fa-linkedin"></i></a>
 
     <!-- reddit -->
-    <a class="reddit" href="https://www.reddit.com/submit?url={{.Permalink}}&title={{.Title}}" title="reddit"><i class="fa fa-reddit"></i></a>
+    <a class="reddit" href="https://www.reddit.com/submit?url={{.Permalink | safeURL }}&title={{.Title | safeURL }}" title="reddit"><i class="fa fa-reddit"></i></a>
 
     <!-- tumblr -->
-    <a class="tumblr" href="https://www.tumblr.com/share/link?url={{.Permalink}}&name={{.Title}}&description={{.Description}}" title="tumblr"><i class="fa fa-tumblr"></i></a>
+    <a class="tumblr" href="https://www.tumblr.com/share/link?url={{.Permalink | safeURL }}&name={{.Title | safeURL }}&description={{.Description | safeURL }}" title="tumblr"><i class="fa fa-tumblr"></i></a>
     
     <!-- pinterest -->
-    <a class="pinterest" href="https://pinterest.com/pin/create/button/?url={{.Permalink}}&media={{.Params.image.url}}&description={{.Title}}" title="pinterest"><i class="fa fa-pinterest-p"></i></a>
+    <a class="pinterest" href="https://pinterest.com/pin/create/button/?url={{.Permalink | safeURL }}&media={{.Params.image.url | safeURL }}&description={{.Title | safeURL }}" title="pinterest"><i class="fa fa-pinterest-p"></i></a>
   </div>
 
 
