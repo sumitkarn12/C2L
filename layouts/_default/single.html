@@ -58,7 +58,7 @@
                 <ul class="w3-ul w3-card w3-round-xlarge">
                     <li class="w3-large w3-round-xlarge w3-card w3-theme-d5"><span>You should read these too</span></li>
                     {{ $current_page := .RelPermalink }}
-                    {{ range where .Site.AllPages "Section" "posts" }}
+                    {{ range first 10 (where .Site.AllPages "Section" "posts") }}
                         {{ if eq .Section "posts" }}
                             {{ if .IsPage }}
                                 <li class="{{if eq $current_page .RelPermalink}}w3-hide{{end}}"><a href="{{.RelPermalink}}">{{.Title}}</a></li>
