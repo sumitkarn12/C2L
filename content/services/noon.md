@@ -19,7 +19,7 @@ This is where C2L comes in. C2L is a leading provider of Noon seller account man
 
 Our team of experienced Noon experts can help you with all aspects of managing your Noon account, so you can focus on growing your business.
 
-**Here are some of the benefits of using C2L's Noon seller account management service:**
+## Here are some of the benefits of using C2L's Noon seller account management service:
 
 - **Increased sales and profits:** We will help you optimize your account for maximum sales. This includes things like creating and optimizing your product listings, running marketing campaigns, and managing your inventory.
 - **Reduced workload:** We can take care of all the day-to-day tasks of managing your account, so you can focus on other aspects of your business.
@@ -30,15 +30,15 @@ Our team of experienced Noon experts can help you with all aspects of managing y
 
 Contact us today to learn more about our Noon seller account management service and how we can help you grow your business.
 
-**Here are some case studies of how C2L has helped our clients achieve success on Noon:**
+## Here are some case studies of how C2L has helped our clients achieve success on Noon:
 
-**Case study 1:**
+### Case study 1:
 
 > One of our clients, a seller of clothing and accessories, was struggling to keep up with the demands of managing their Noon seller account. They were spending hours each day responding to inquiries, fulfilling orders, and managing their inventory. As a result, they were not able to focus on other aspects of their business, such as developing new products and expanding into new markets.
 >
 > After outsourcing the management of their Noon seller account to C2L, our client was able to free up their time and focus on other aspects of their business. Within a few months, their sales on Noon increased by 20%.
 
-**Case study 2:**
+### Case study 2:
 
 > Another client of ours, a seller of electronics, was having difficulty ranking their products high in the Noon search results. As a result, they were not getting the visibility they needed to drive sales.
 > C2L helped our client to optimize their product listings and run marketing campaigns. Within a few months, their products were ranking higher in the Noon search results and their sales increased by 30%.

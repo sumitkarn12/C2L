@@ -11,7 +11,7 @@ In today's globalized world, international trade is more complex than ever. C2L 
 
 Whether you're a seasoned exporter or just starting out, C2L's tailored solutions can help amplify your online business, safeguarding your interests and ensuring that every transaction is smooth, compliant, and profitable.
 
-**Why Choose C2L for Your International Trade Needs?**
+## Why Choose C2L for Your International Trade Needs?
 
 - **Supplier and Buyer Sourcing**: Dive into the vast sea of opportunities with our network. We'll match you with the most relevant suppliers or buyers, ensuring that you get the best deals and genuine partners.
 

@@ -7,10 +7,10 @@ image:
     alt: "A contact us section of C2L to get in touch"
 ---
 
-# Would you like to speak to us?
+## Would you like to speak to us?
 
 [📧 info@c2l.asia](//mailto:info@c2l.asia)
 
 [📞 +971 502 767 027](//tel:+971502767027)
 
-[🗺 Dubai, United Arab Emirates](https://maps.app.goo.gl/Rv2HabBeg5JWbSwu5)
+🗺 Office 2015-B, Al Qouz 3, Dubai, United Arab Emirates

@@ -35,5 +35,3 @@ Our team of experienced Amazon UAE experts can help you with all aspects of mana
 If you are serious about growing your Amazon UAE business, then C2L is the perfect partner for you. We have a proven track record of helping our clients achieve success on Amazon UAE.
 
 Contact us today to learn more about our Amazon UAE seller account management service and to schedule a free consultation.
-
-[Mail us at info@c2l.asia](mailto:info@c2l.asia) or [Call to  +971 502 767 027](tel:+971502767027)
