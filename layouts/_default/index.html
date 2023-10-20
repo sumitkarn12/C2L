@@ -6,8 +6,8 @@
         <div class="w3-padding-16"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-theme-l5 w3-large w3-round-xxlarge">Book a free consultation</button></div>
         <span class="w3-large w3-padding-16">Give us a call or send an email</span>
         <div class="w3-xlarge">
-            <a href="tel:+971502767027" class="w3-margin-bottom"><i class="fa fa-phone"></i> +971 50 276 7027</a> / 
-            <a href="mailto:info@c2l.asia" class="w3-marging-top"><i class="fa fa-envelope"></i> info@c2l.asia</a>
+            <a href="tel:{{.Site.Params.phone}}" class="w3-margin-bottom"><i class="fa fa-phone"></i> {{.Site.Params.phone}}</a> / 
+            <a href="mailto:{{.Site.Params.email}}" class="w3-marging-top"><i class="fa fa-envelope"></i> {{.Site.Params.email}}</a>
         </div>
     </div>
 </section>

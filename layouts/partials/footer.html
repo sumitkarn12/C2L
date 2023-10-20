@@ -28,7 +28,7 @@
   <div class="desktop-width footer-wrapper">
     
     <footer class="w3-row">
-      <div class="w3-col s12 m4 w3-container w3-padding">
+      <div class="w3-col s12 m4 w3-container w3-padding newsletter">
         <p class="w3-large w3-text-white">Signup our newsletter</p>
         <form action="#" method="post" name="newsletter" class="w3-small w3-display-container">
           <input class="w3-round-large w3-input" type="email" name="email" placeholder="Enter your email here" autocomplete="on" required />
@@ -37,9 +37,9 @@
         <p id="alert" class="w3-round-xlarge w3-padding w3-container w3-theme-l5">That's great. We'll keep you posted.</p>
       
         <p>
-          <div class="w3-text-white w3-margin-bottom">📧 <a href="mailto:info@c2l.asia">info@c2l.asia</a></div>
-          <div class="w3-text-white w3-margin-bottom">📞 <a href="tel:+971502767027">+971 502 767 027</a></div>
-          <div class="w3-text-white w3-margin-bottom">🗺 Dubai, United Arab Emirates</div>
+          <div class="w3-text-white w3-margin-bottom">📧 <a href="mailto:{{.Site.Params.email}}">{{.Site.Params.email}}</a></div>
+          <div class="w3-text-white w3-margin-bottom">📞 <a href="tel:{{.Site.Params.phone}}">{{.Site.Params.phone}}</a></div>
+          <div class="w3-text-white w3-margin-bottom">🗺 {{.Site.Params.address}}</div>
         </p>
       </div>
 
@@ -64,7 +64,7 @@
           sales. Begin your simplified and efficient online selling journey in the UAE with C2L.</p>
           <p class="w3-text-white">Follow:</p>
           <div class="follow">
-            <a href="https://www.linkedin.com/company/c2l-uae" class="w3-card w3-button w3-circle w3-xlarge w3-theme-l5"><i class="fa fa-linkedin-square"></i></a>
+            <a href="{{.Site.Params.linkedin}}" class="w3-card w3-button w3-circle w3-xlarge w3-theme-l5"><i class="fa fa-linkedin-square"></i></a>
             <a href="#" class="w3-card w3-hide w3-button w3-circle w3-xlarge w3-theme-l5"><i class="fa fa-twitter-square"></i></a>
             <a href="#" class="w3-card w3-hide w3-button w3-circle w3-xlarge w3-theme-l5"><i class="fa fa-facebook-square"></i></a>
             <a href="#" class="w3-card w3-hide w3-button w3-circle w3-xlarge w3-theme-l5"><i class="fa fa-instagram"></i></a>
