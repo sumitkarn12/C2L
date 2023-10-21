@@ -3,29 +3,55 @@
 <section class="main-landing-page">
   <div class="desktop-width">
       <h2 class="w3-center">{{ .Title }}</h2>
-  </div>
+      <ol class="breadcrumb w3-center">
+        {{ range .Ancestors.Reverse }}
+        <li>
+            <a href="{{ .Permalink }}">{{ if .IsHome }}Home{{ else }}{{ .LinkTitle }}{{ end }}</a>
+        </li>
+        {{ end }}
+        <li>{{.LinkTitle}}</li>
+    </ol>
+</div>
 </section>
 
 <section class="desktop-width">
     {{ .Content }}
 
-    <div class="w3-row w3-margin-top blogs">
-      {{ range.Data.Pages }}
-        <div class="w3-col s12 w3-container w3-margin-bottom">
-          <a href="{{ .RelPermalink }}">
-            <div class="w3-card w3-round-xlarge" style="background-image: url({{ .Params.image.url }});">
-              <div class="w3-right w3-theme-l5 w3-container w3-padding-16">
-                {{ if .Date }}
-                <time class="w3-tag w3-theme w3-tiny w3-round-large" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                  {{ .Date.Format "January 2, 2006" }}
-                </time>
-                {{ end }}
-                <h1 class="w3-medium">{{ .Title }}</h1>
-              </div>
+    <div class="w3-row w3-margin-top w3-margin-bottom blogs">
+      <ul class="w3-ul w3-border w3-round-xlarge w3-col s12 m6">
+        {{ range.Data.Pages }}
+          <li class="w3-padding-16">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{.Params.image.url}}" alt="{{ .Params.image.alt }}" class="w3-round-large w3-block" />
+                  <h2 class="w3-medium">{{.Title}}</h2>
+                  {{ if .Date }}
+                    <time class="w3-tag w3-theme w3-tiny w3-round-large" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                      {{ .Date.Format "January 2, 2006" }}
+                    </time>
+                  {{ end }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      <div class="w3-col s12 m1 w3-padding-16"></div>
+      <div class="w3-col s12 m5">
+        <div class="w3-border w3-round-xlarge w3-margin-bottom">
+            <div class="w3-container w3-theme-d5 w3-round-xlarge">
+                <h4>Book a free consultation</h4>
             </div>
-          </a>
+            <form action="#" method="post" name="lead" class="w3-container w3-padding-16">
+                <label><b>Name</b></label>
+                <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
+                <label><b>Mobile number</b></label>
+                <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
+                <label><b>Email id</b></label>
+                <input class="w3-input w3-round-large w3-border" type="email" placeholder="Enter your email" name="email" required>
+                <br>
+                <button class="w3-button w3-round-large w3-theme w3-block" type="submit">Submit</button>
+                <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been submitted and we'll get in touch with you shortly.</p>
+            </form>    
         </div>
-      {{ end }}
+      </div>
     </div>
 
   </section>
