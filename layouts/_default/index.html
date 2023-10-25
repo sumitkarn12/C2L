@@ -282,4 +282,18 @@
     </div>
 </div>
 
+<div class="recent-blogs w3-container w3-padding-16 desktop-width">
+    <ul class="w3-ul w3-border w3-round-xlarge">
+        <li><h2>Recent blogs</h2></li>
+        {{ range first 4 ((where .Site.Pages "Section" "=" "posts").ByDate).Reverse  }}
+        {{ if eq .Title "Posts" }}
+            {{ continue }}
+        {{ end }}
+        <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
+        {{ end }}
+        <li class="w3-large w3-center"><a href="/posts">Read more...</a></li>
+    </ul>
+</div>
+
+
 {{ partial "footer.html" . }}
