@@ -127,10 +127,16 @@ h6 {
 }
 
 .blog-header-image {
-  position: relative; top: -45px; height: 286PX; width: 100%; overflow: hidden;
+  position: relative; top: -45px; height: 286PX; overflow: hidden;
 }
 .blog-header-image img {
-  height: 286px; width: 786px;
+  /* height: 286px; width: 786px; */
+  width: 100%;
+}
+.blog-img-wrapper {
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 .breadcrumb {
   list-style: none;
