@@ -1,7 +1,7 @@
 ---
-title: "Know who we are"
-linktitle: "About us"
+title: "About us"
 description: "An about us section of C2L to know who we are"
+menu: nav
 image:
     url: "https://i.ibb.co/Zf929VQ/about-us.webp"
     alt: "An about us section of C2L to know who we are"

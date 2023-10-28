@@ -15,7 +15,7 @@
           </div>
           <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
               <button class="w3-button w3-round w3-theme w3-right" type="submit">Submit</button>
-              <button onclick="document.getElementById('id01').style.display='none'" type="reset" class="w3-margin-right w3-button w3-theme-l4 w3-round w3-right">Not interested</button>
+              <button onclick="toggleRequestCallback()" type="reset" class="w3-margin-right w3-button w3-theme-l4 w3-round w3-right">Not interested</button>
           </div>
           <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been
             submitted and we'll get in touch with you shortly.</p>
@@ -83,15 +83,15 @@
   </div>
 
 <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
+  // if (window.netlifyIdentity) {
+  //   window.netlifyIdentity.on("init", user => {
+  //     if (!user) {
+  //       window.netlifyIdentity.on("login", () => {
+  //         document.location.href = "/admin/";
+  //       });
+  //     }
+  //   });
+  // }
 
   function getUUID() {
     let uuid = localStorage.getItem( "uuid" );
@@ -127,7 +127,6 @@
     });
   });
 
-
   document.querySelectorAll( "form[name=lead]" ).forEach( f => {
     f.addEventListener( 'submit', ev => {
       ev.preventDefault();
@@ -154,7 +153,44 @@
       return false;
     });
   });
+
+window.onscroll = () => {
+  if (document.documentElement.scrollTop > 120 ) {
+    document.querySelector(".navbar").classList.add("w3-top");
+  } else {
+    document.querySelector(".navbar").classList.remove("w3-top");
+  }
+}
+
+function expandSubmenu() {
+  var x = document.getElementById("submenu");
+  if (x .classList.contains("w3-show") ) {
+    x.classList.remove("w3-show");
+  } else { 
+    x.classList.add("w3-show");
+  }
+}
+
+
+function toggleRequestCallback() {
+  let x = document.querySelector("#id01");
+  if ( x.classList.contains("w3-show") ) {
+    x.classList.remove("w3-show")
+  } else {
+    x.classList.add("w3-show")
+  }
+}
+function toggleMenu() {
+  let x = document.querySelector("#menu-modal");
+  if ( x.classList.contains("w3-show") ) {
+    x.classList.remove("w3-show")
+  } else {
+    x.classList.add("w3-show")
+  }
+}
+
 </script>
+
 
 </body>
  <!-- Sumo email capture plugin -->

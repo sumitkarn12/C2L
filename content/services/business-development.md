@@ -2,6 +2,9 @@
 title: "Grow business with our developments service"
 linktitle: "Business Development"
 description: "Our team of industry experts brings years of experience & we maintain highest standards of quality in all our deliverables."
+menu:
+    nav:
+        parent: services
 image:
     url: "https://i.ibb.co/RCX3WPX/business-development.webp"
     alt: "Grow business with our developments service"

@@ -2,6 +2,9 @@
 title: "Your Gateway to Seamless International Trade Between UAE & India"
 linktitle: "Export/Import Trading assistant"
 description: "C2L bridges businesses between UAE & India, offering seamless e-commerce growth, customs expertise, and strategic logistics."
+menu:
+    nav:
+        parent: services
 image:
     url: "https://i.ibb.co/yp0ymLf/import-export-trading.webp"
     alt: "Export/Import Trading assistant"

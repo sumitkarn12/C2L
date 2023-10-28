@@ -196,3 +196,52 @@ h6 {
 .reddit { background: #FF4500; }
 .tumblr { background: #000000; }
 .pinterest { background: #cb2027; }
+
+
+.header-wrapper {
+  height: 100vh;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  z-index: -999;
+}
+
+.header {
+  text-align: center;
+  color: #00000010;
+  font-size: 144px;
+  font-weight: bolder;
+  user-select: none;
+}
+
+.navbar {
+  transition: all 0.5s;
+}
+
+.bar {
+  transition: all 0.5s;
+}
+.topbar {
+  width: 100%;
+}
+.topbar>div {
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px auto;
+}
+
+#menu-modal>div {
+  overflow: hidden;
+}
+#menu-modal-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+}

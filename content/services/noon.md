@@ -2,6 +2,9 @@
 title: "Best Noon Seller Account Management Service"
 linktitle: "Noon Seller Account Management"
 description: "Our experienced team of Noon experts can help you manage your account from start to finish, so you can focus on your business."
+menu:
+    nav:
+        parent: services
 image:
     url: "https://cloud-1de12d.b-cdn.net/media/iW=780&iH=572&oX=0&oY=144&cW=780&cH=286/dccf1899cbaa79bc166d5e57681566ba/image.png"
     alt: "stacked noon boxes showing best noon seller account management service"

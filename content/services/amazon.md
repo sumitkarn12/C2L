@@ -2,6 +2,9 @@
 title: "Best Amazon Seller Account Management Service"
 linktitle: "Amazon Seller Account Management"
 description: "Our experienced team of Amazon experts can help you manage your account from start to finish, so you can focus on your business."
+menu:
+    nav:
+        parent: services
 image:
     url: "https://i.ibb.co/Q6Y5kJ1/amazon-services-cover.jpg"
     alt: "Sketched outline of amazone seller account management service"
