@@ -1,6 +1,6 @@
 
 
-<nav class="topbar navbar">
+<nav class="topbar navbar w3-top">
   <div class="desktop-width w3-theme-l1 w3-card-4">
     <a href="/">
       <img src="{{ .Site.Params.logo}}" class="w3-bar-item nav-logo" style="margin: 0; padding: 0;" alt="Logo of C2L" >
@@ -41,33 +41,32 @@
 
 
 <div id="menu-modal" class="w3-modal" onclick="toggleMenu()">
-  <div class="w3-modal-content w3-card-4 w3-round-xlarge">
-    <div id="menu-modal-top">
+  <div class="w3-modal-content w3-card-4 w3-round-xlarge w3-animate-right">
+    <div id="menu-modal-top" class="w3-border-bottom">
       <a href="/" class="w3-button w3-theme-l1"><i class="fa fa-home"></i></a>
       <span> {{.Site.Params.name}}</span>
       <a class="w3-button w3-theme-l1"><i class="fa fa-close"></i></a>
     </div>
-      <div class="w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button w3-border-bottom" onclick="toggleRequestCallback()">Request callback</a>
-        {{ $p := . }}
-        {{ range .Site.Menus.nav }} 
-          {{ if $p.IsMenuCurrent .Menu . }}
-            <a href="{{.URL}}" class="w3-bar-item w3-theme-l5 w3-border-bottom w3-button">{{.Name}}</a>
-          {{ else if .HasChildren }}
-            <span class="w3-container w3-theme-l1 w3-padding w3-border-bottom w3-block">{{title .Name}}</span>
-            {{ range .Children}}
-              {{ if $p.IsMenuCurrent .Menu . }}
-                <a href="{{.URL}}" class="w3-bar-item w3-theme-l5 w3-button  w3-border-bottom"><i class="fa fa-link"></i> {{.Name}}</a>
-              {{ else }}
-                <a  href="{{.URL}}" class="w3-bar-item w3-button w3-border-bottom"><i class="fa fa-link"></i> {{.Name}}</a>
-              {{ end }}
+    <div class="mobile-navbar w3-padding-16 w3-container">
+      <a href="#" class="w3-bar-item w3-button w3-round-xlarge" onclick="toggleRequestCallback()">Request callback</a>
+      {{ $p := . }}
+      {{ range .Site.Menus.nav }}
+        {{ if $p.IsMenuCurrent .Menu . }}
+          <a href="{{.URL}}" class="w3-theme-l5 w3-round-xlarge w3-button">{{.Name}}</a>
+        {{ else if .HasChildren }}
+        <hr>
+          {{ range .Children}}
+            {{ if $p.IsMenuCurrent .Menu . }}
+              <a href="{{.URL}}" class="w3-theme-l5 w3-button w3-round-xlarge"><i class="fa fa-link"></i> {{.Name}}</a>
+            {{ else }}
+              <a href="{{.URL}}" class="w3-button w3-round-xlarge"><i class="fa fa-link"></i> {{.Name}}</a>
             {{ end }}
-          {{ else }}
-            <a href="{{.URL}}" class="w3-bar-item w3-button w3-border-bottom">{{.Name}}</a>
           {{ end }}
+        {{ else }}
+          <a href="{{.URL}}" class="w3-button w3-round-xlarge">{{.Name}}</a>
         {{ end }}
-      </div>
-  
+      {{ end }}
+    </div>
   </div>
 </div>
 

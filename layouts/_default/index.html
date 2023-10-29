@@ -3,7 +3,7 @@
 <section class="main-landing-page">
     <div class="desktop-width">
         <h1 class="w3-padding-16">Strugling to sell your products online?</h1>
-        <div class="w3-padding-16"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-theme-l5 w3-large w3-round-xxlarge">Book a free consultation</button></div>
+        <div class="w3-padding-16"><button onclick="toggleRequestCallback()" class="w3-button w3-theme-l5 w3-large w3-round-xxlarge">Book a free consultation</button></div>
         <span class="w3-large w3-padding-16">Give us a call or send an email</span>
         <div class="w3-xlarge">
             <a href="tel:{{.Site.Params.phone}}" class="w3-margin-bottom"><i class="fa fa-phone"></i> {{.Site.Params.phone}}</a> / 
@@ -192,7 +192,7 @@
             </div>
 
             <div class="w3-col s12 w3-container">
-                <p>Services are not only limited to these platform. C2L can help you with almost all the platforms on which your products can be sold. <a onclick="document.getElementById('id01').style.display='block'" href="#">Reach out to us</a> and know how C2L can help.</p>
+                <p>Services are not only limited to these platform. C2L can help you with almost all the platforms on which your products can be sold. <a onclick="toggleRequestCallback()" href="#">Reach out to us</a> and know how C2L can help.</p>
             </div>
 
         </div>
