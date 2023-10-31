@@ -11,20 +11,19 @@
         {{ if $p.IsMenuCurrent .Menu . }}
           <a href="{{.URL}}" class="w3-bar-item w3-theme w3-button w3-round-large">{{.Name}}</a>
         {{ else if .HasChildren }}
-          <div class="w3-dropdown-click w3-round-large">
-            <button class="w3-button w3-round-large" onclick="expandSubmenu()">
-              {{title .Name}} <i class="fa fa-caret-down"></i>
-            </button>
-            <div id="submenu" class="w3-dropdown-content w3-bar-block w3-card w3-round-large">
-              {{ range .Children}}
-                {{ if $p.IsMenuCurrent .Menu . }}
-                  <a href="{{.URL}}" class="w3-tiny w3-bar-item w3-theme w3-button">{{.Name}}</a>
-                {{ else }}
-                  <a  href="{{.URL}}" class="w3-tiny w3-bar-item w3-button w3-round-large">{{.Name}}</a>
+            <div class="w3-dropdown-hover">
+              <button class="w3-button w3-round-large">{{title .Name}} <i class="fa fa-caret-down"></i></button>
+              <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-xlarge w3-container w3-padding-16">
+                {{ range .Children}}
+                  {{ if $p.IsMenuCurrent .Menu . }}
+                    <a href="{{.URL}}" class="w3-bar-item w3-button w3-theme w3-round-large">{{.Name}}</a>
+                  {{ else }}
+                    <a  href="{{.URL}}" class="w3-bar-item w3-button w3-round-large">{{.Name}}</a>
+                  {{ end }}
                 {{ end }}
-              {{ end }}
-            </div>  
-          </div>
+              </div>
+            </div>
+
         {{ else }}
           <a href="{{.URL}}" class="w3-bar-item w3-button w3-round-large">{{.Name}}</a>
         {{ end }}
