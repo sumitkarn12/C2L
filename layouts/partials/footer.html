@@ -1,27 +1,28 @@
-
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card w3-animate-zoom w3-round">
-      <div class="w3-container w3-theme">
-          <p class="w3-large">Book a free consultation</p>
-      </div>
-      <form action="#" method="post" name="lead">
-          <div class="w3-section w3-container">
-              <label><b>Name</b></label>
-              <input class="w3-input w3-round w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
-              <label><b>Mobile number</b></label>
-              <input class="w3-input w3-round w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
-              <label><b>Email id</b></label>
-              <input class="w3-input w3-round w3-border" type="email" placeholder="Enter your email" name="email" required>
-          </div>
-          <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-              <button class="w3-button w3-round w3-theme w3-right" type="submit">Submit</button>
-              <button onclick="toggleRequestCallback()" type="reset" class="w3-margin-right w3-button w3-theme-l4 w3-round w3-right">Not interested</button>
-          </div>
-          <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been
-            submitted and we'll get in touch with you shortly.</p>
-        </form>
+<!-- Testing dialog end-->
+<dialog id="id01" class="w3-card w3-animate-zoom w3-round-xlarge">
+    <div class="w3-container w3-theme">
+        <p class="w3-large">Book a free consultation</p>
+    </div>
+    <form action="#" method="post" name="lead">
+        <div class="w3-section w3-container">
+            <label><b>Name</b></label>
+            <input class="w3-input w3-round w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
+            <label><b>Mobile number</b></label>
+            <input class="w3-input w3-round w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
+            <label><b>Email id</b></label>
+            <input class="w3-input w3-round w3-border" type="email" placeholder="Enter your email" name="email" required>
+        </div>
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+            <button class="w3-button w3-round w3-theme w3-right" type="submit">Submit</button>
+            <button onclick="toggleRequestCallback()" type="reset" class="w3-margin-right w3-button w3-round w3-right">Not interested</button>
+        </div>
+        <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been
+          submitted and we'll get in touch with you shortly.</p>
+      </form>
   </div>
-</div>
+</dialog>
+<!-- Testing dialog end-->
+
 
 <div class="desktop-width footer-wrapper">
   
@@ -127,7 +128,7 @@
   document.querySelectorAll( "form[name=lead]" ).forEach( f => {
     f.addEventListener( 'submit', ev => {
       ev.preventDefault();
-      ev.target.querySelector( "button[type=submit]" ).innerHTML = "<i class='fa fa-refresh'></i>"
+      let previousText = setLoadingButton(ev.target.querySelector( "button[type=submit]" ));
       let email = ev.target.querySelector( "input[name=email]" ).value;
       let name = ev.target.querySelector( "input[name=name]" ).value;
       let mobile = ev.target.querySelector( "input[name=mobile]" ).value;
@@ -136,7 +137,7 @@
         body: JSON.stringify({ "email": email, "name": name, "mobile": mobile, uuid: getUUID() })
       }).catch( console.error ).finally( r =>{
         setTimeout( ()=> {
-          ev.target.querySelector( "button[type=submit]" ).innerHTML = "Submit"
+          removeLoadingButton( ev.target.querySelector( "button[type=submit]" ), previousText )
           ev.target.querySelectorAll( "#alert" ).forEach(element => {
             element.style.display = "block"
           });
@@ -144,6 +145,7 @@
             ev.target.querySelectorAll( "#alert" ).forEach(element => {
               element.style.display = "none"
             });
+            toggleRequestCallback( true );
           }, 5000);
         }, 1500)
       })
@@ -151,13 +153,15 @@
     });
   });
 
-// window.onscroll = () => {
-//   if (document.documentElement.scrollTop > 120 ) {
-//     document.querySelector(".navbar").classList.add("w3-top");
-//   } else {
-//     document.querySelector(".navbar").classList.remove("w3-top");
-//   }
-// }
+  function setLoadingButton( elm ) {
+    let toBeReplaced = elm.innerHTML;
+    elm.innerHTML = "<i class='fa fa-refresh w3-spin'></i>";
+    return toBeReplaced;
+  }
+
+  function removeLoadingButton( elm, afterText ) {
+    elm.innerHTML = afterText;
+  }
 
   function expandSubmenu() {
     var x = document.getElementById("submenu");
@@ -168,20 +172,24 @@
     }
   }
 
-  function toggleRequestCallback() {
+  function toggleRequestCallback( forceClose ) {
     let x = document.querySelector("#id01");
-    if ( x.classList.contains("w3-show") ) {
-      x.classList.remove("w3-show")
+    if ( forceClose ) {
+      x.close();
+    } else if ( x.open ) {
+      x.close();
     } else {
-      x.classList.add("w3-show")
+      x.showModal();
     }
   }
-  function toggleMenu() {
+  function toggleMenu( forceClose ) {
     let x = document.querySelector("#menu-modal");
-    if ( x.classList.contains("w3-show") ) {
-      x.classList.remove("w3-show")
+    if ( forceClose ) {
+      x.close();
+    } else if ( x.open ) {
+      x.close();
     } else {
-      x.classList.add("w3-show")
+      x.showModal();
     }
   }
 

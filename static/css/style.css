@@ -270,3 +270,13 @@ h6 {
 .navbar-separator {
   margin-top: 102px;
 }
+
+dialog::backdrop {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(3px);
+  transition: all 0.5s;
+}
+dialog {
+  padding: 0;
+  border: none;
+}

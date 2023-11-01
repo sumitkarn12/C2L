@@ -1,5 +1,3 @@
-
-
 <nav class="topbar navbar w3-top">
   <div class="desktop-width w3-theme-l1 w3-card-4">
     <a href="/">
@@ -30,51 +28,40 @@
       {{ end }}
       <a href="#" class="w3-bar-item w3-button w3-round-large" onclick="toggleRequestCallback()">Request callback</a>
     </div>
-    <a onclick="toggleMenu()" class="toggle-menu w3-button w3-xlarge w3-circle w3-hide-medium w3-hide-large">
+    <button onclick="toggleMenu()" class="toggle-menu w3-button w3-xlarge w3-circle w3-hide-medium w3-hide-large">
       <i class="fa fa-bars"></i>
-    </a>
+    </button>
   </div>
-
 </nav>
 
-
-
-<div id="menu-modal" class="w3-modal" onclick="toggleMenu()">
-  <div class="w3-modal-content w3-card-4 w3-round-xlarge w3-animate-right">
+<dialog id="menu-modal" class="w3-card-4 w3-round-xlarge w3-animate-zoom">
+  <div>
     <div id="menu-modal-top" class="w3-border-bottom">
       <a href="/" class="w3-button w3-theme-l1"><i class="fa fa-home"></i></a>
       <span> {{.Site.Params.name}}</span>
-      <a class="w3-button w3-theme-l1"><i class="fa fa-close"></i></a>
+      <button onclick="toggleMenu( true )" class="w3-button w3-theme-l1"><i class="fa fa-close"></i></button>
     </div>
     <div class="mobile-navbar w3-padding-16 w3-container">
-      <a href="#" class="w3-bar-item w3-button w3-round-xlarge" onclick="toggleRequestCallback()">Request callback</a>
+      <button class="w3-bar-item w3-button w3-round-large" onclick="toggleRequestCallback()">Request callback</button>
       {{ $p := . }}
       {{ range .Site.Menus.nav }}
         {{ if $p.IsMenuCurrent .Menu . }}
-          <a href="{{.URL}}" class="w3-theme-l5 w3-round-xlarge w3-button">{{.Name}}</a>
+          <a href="{{.URL}}" class="w3-theme-l5 w3-round-large w3-button">{{.Name}}</a>
         {{ else if .HasChildren }}
         <hr>
           {{ range .Children}}
             {{ if $p.IsMenuCurrent .Menu . }}
-              <a href="{{.URL}}" class="w3-theme-l5 w3-button w3-round-xlarge"><i class="fa fa-link"></i> {{.Name}}</a>
+              <a href="{{.URL}}" class="w3-theme-l5 w3-button w3-round-large"><i class="fa fa-link"></i> {{.Name}}</a>
             {{ else }}
-              <a href="{{.URL}}" class="w3-button w3-round-xlarge"><i class="fa fa-link"></i> {{.Name}}</a>
+              <a href="{{.URL}}" class="w3-button w3-round-large"><i class="fa fa-link"></i> {{.Name}}</a>
             {{ end }}
           {{ end }}
         {{ else }}
-          <a href="{{.URL}}" class="w3-button w3-round-xlarge">{{.Name}}</a>
+          <a href="{{.URL}}" class="w3-button w3-round-large">{{.Name}}</a>
         {{ end }}
       {{ end }}
     </div>
   </div>
-</div>
-
-
-
-
-
-
-
-
+</dialog>
 
 
