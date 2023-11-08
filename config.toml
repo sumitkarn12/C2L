@@ -4,6 +4,7 @@ baseURL = "https://c2l.asia/"
 
 [params]
   name = "C2L"
+  copyright = "COME-TO-LIFE GENERAL TRADING LLC"
   logo = "/images/c2l_icon.webp"
   phone = "+971 502 767 027"
   email = "info@c2l.asia"
