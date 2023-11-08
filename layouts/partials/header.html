@@ -25,25 +25,14 @@
     <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ if not .IsHome }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
+	<meta name="robots" content="max-image-preview:large" />
+
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 	<!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
 
 	<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL}}index.xml" title="{{.Title}}">
-	
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
-		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-		s1.async=true;
-		s1.src='https://embed.tawk.to/6521940ceb150b3fb99f1886/1hc5ikkn3';
-		s1.charset='UTF-8';
-		s1.setAttribute('crossorigin','*');
-		s0.parentNode.insertBefore(s1,s0);
-		})();
-	</script>
-	<!--End of Tawk.to Script-->
 
+	<!-- Sender email subscription api -->
 	<script>
 		(function (s, e, n, d, er) {
 		  s['Sender'] = er;
@@ -58,14 +47,7 @@
 		})(window, document, 'script', 'https://cdn.sender.net/accounts_resources/universal.js', 'sender');
 		sender('f894f1a9560387')
 	</script>
-	<!-- Clarity tracking code for https://c2l.asia/ -->
-	<script type="text/javascript">
-		(function(c,l,a,r,i,t,y){
-			c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-			t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-			y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-		})(window, document, "clarity", "script", "jgz1ligklj");
-	</script>
+	<!-- Sender email subscription api -->
 	
 	{{ if eq .Section "posts" }}
     <script type="application/ld+json">
