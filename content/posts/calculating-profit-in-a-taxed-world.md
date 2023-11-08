@@ -1,4 +1,5 @@
 ---
+seo_title: "How to calculate profit after tax deduction?"
 title: "Calculating Profit in a Taxed World: A Seller’s Comprehensive Guide"
 description: "Learn the art of calculating profit factoring in a 5% tax, and understand how tax credits come into play. Example included."
 date: "2023-10-26"

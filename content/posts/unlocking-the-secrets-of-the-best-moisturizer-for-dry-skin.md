@@ -1,4 +1,5 @@
 ---
+seo_title: "The Best Moisturizer for Dry Skin"
 title: "Unlocking the Secrets of the Best Moisturizer for Dry Skin"
 description: "Discover the ultimate solution for dry skin with our top-rated moisturizer. Say goodbye to dryness and hello to supple, hydrated skin!"
 date: "2023-11-02"

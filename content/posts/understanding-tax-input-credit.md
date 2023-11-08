@@ -1,4 +1,5 @@
 ---
+seo_title: "What is TAX Input Credit?"
 title: "Understanding Tax Input Credit: Pricing Strategy for Sellers"
 description: "Dive into the concept of tax input credit and learn how it can shape effective product pricing for sellers."
 date: "2023-10-25"

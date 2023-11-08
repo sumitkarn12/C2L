@@ -1,4 +1,5 @@
 ---
+seo_title: "How noon releases the payments?"
 title: "Unveil the concept on how noon releases the payments"
 description: "Learn how noon releases payments to sellers, including the payment cycle, processing time, and payment methods."
 date: "2023-10-15"

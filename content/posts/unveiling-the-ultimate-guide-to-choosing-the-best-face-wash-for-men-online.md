@@ -1,4 +1,5 @@
 ---
+seo_title: "How to choose the best Face Wash for Men?"
 title: "Unveiling the Ultimate Guide to Choosing the Best Face Wash for Men Online"
 description: "Discover the top-rated face wash for men online. Our expert guide helps you make the right choice for your skincare needs."
 date: "2023-11-02"

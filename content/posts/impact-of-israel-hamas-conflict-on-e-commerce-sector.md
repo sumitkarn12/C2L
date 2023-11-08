@@ -1,4 +1,5 @@
 ---
+seo_title: "Impact of Israel-Hamas Conflict on E-Commerce"
 title: "Impact of Israel-Hamas Conflict on E-Commerce Sector"
 description: "Explore how the Israel-Hamas tensions ripple through online marketplaces. Understand supply chain, consumer sentiment, and more."
 date: "2023-10-17"

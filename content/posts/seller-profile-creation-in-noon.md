@@ -1,4 +1,5 @@
 ---
+seo_title: "What is Seller Profile on noon.com?"
 title: "Unpacking noon's Seller Profile Feature: Is It Right For You?"
 description: "Explore the benefits and challenges of displaying seller info on noon. Discover how agencies like C2L can manage these challenges for you."
 date: "2023-10-16"

@@ -1,4 +1,5 @@
 ---
+seo_title: "Common Mistakes Sellers Make and How to Avoid Them"
 title: "Common Mistakes Sellers Make and How to Avoid Them"
 description: "Uncover key mistakes online sellers make and practical tips to boost sales. Avoid pitfalls and optimize your e-commerce strategy."
 date: "2023-10-21"

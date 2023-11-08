@@ -1,4 +1,5 @@
 ---
+seo_title: "Importance of ratings"
 title: "Boost E-commerce Ratings with C2L: Unlock Sales Success!"
 description: "Maximize sales on Amazon & Noon! Learn how ratings impact trust & visibility and let C2L guide your 5-star journey."
 date: "2023-10-25"
