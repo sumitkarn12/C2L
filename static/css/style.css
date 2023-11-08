@@ -132,10 +132,13 @@ h6 {
 }
 .blog-header-image {
   position: relative; top: -45px; height: 286PX; overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .blog-header-image img {
-  height: 286px;
-  transform: translateX(0px);
+  /* height: 286px; */
+  transform: translateX(0px)  ;
   animation-name: blog-header-image-animation;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;

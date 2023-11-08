@@ -4,7 +4,7 @@ title: "The Ultimate Guide to Choosing the Best Air Fryer for Healthier Cooking"
 description: "Discover the top air fryers for healthy cooking in our comprehensive guide. Make the best choice for your kitchen!"
 date: "2023-11-04"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/tCdZg06s/air-fryer-2.webp"
     alt: "How to choose Best Air Fryer for Healthier Cooking?"
 ---
 

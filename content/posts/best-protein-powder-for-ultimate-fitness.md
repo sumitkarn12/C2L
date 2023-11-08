@@ -4,7 +4,7 @@ title: "Unlock Your Full Potential with the Best Protein Powder for Ultimate Fit
 description: "Discover the perfect protein powder for your fitness journey! Explore top-rated protein supplements and unleash your inner strength."
 date: "2023-11-05"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/gJy4DS5r/protein-powder.webp"
     alt: "Unlock Your Full Potential with the Best Protein Powder for Ultimate Fitness"
 ---
 

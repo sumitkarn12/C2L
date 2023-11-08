@@ -4,7 +4,7 @@ title: "Unlock Radiant Skin: The Ultimate Guide to the Best Vitamin C Serums"
 description: "Discover the top vitamin C serums for flawless skin. Expert insights and recommendations for a radiant complexion."
 date: "2023-11-03"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/y8kHbc77/vitamin-c-serum.webp"
     alt: "Guide to Best Vitamin C Serums"
 ---
 

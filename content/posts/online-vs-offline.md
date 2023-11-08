@@ -4,7 +4,7 @@ title: "Maximizing Profit: Leveraging the Online Shopping vs. Offline Shopping D
 description: "Unlock the secrets of profiting from the online vs. offline shopping debate as a seller. Discover strategies in this article."
 date: "2023-11-07"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/xj49Q68W/online-vs-offline.webp"
     alt: "Seller's POV on Online Shopping & Offline Shopping"
 ---
 

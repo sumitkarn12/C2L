@@ -4,7 +4,7 @@ title: "Unlock Silky Smooth Strands: The Ultimate Guide to the Best Hair Straigh
 description: "Discover the top hair straighteners for flawless locks! Get the sleek and shiny hair you desire with our expert recommendations."
 date: "2023-11-08"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/9fZDRvRR/hair-straighteners.webp"
     alt: "Unlock Silky Smooth Strands: The Ultimate Guide to the Best Hair Straighteners"
 ---
 

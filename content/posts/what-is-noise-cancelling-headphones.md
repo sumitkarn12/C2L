@@ -4,7 +4,7 @@ title: "The Ultimate Guide to Noise Cancelling Headphones"
 description: "Discover the best noise cancelling headphones for a peaceful listening experience. Our expert guide covers top picks and pro tips. Find your sonic sanctuary today!"
 date: "2023-11-02"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/Kz5wz8m9/noise-cancelling-headphones.webp"
     alt: "What is Noise Cancelling Headphones?"
 ---
 
