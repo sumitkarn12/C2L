@@ -16,7 +16,7 @@
 
 <div class="desktop-width w3-container">
     <div class="w3-row">
-        <div class="w3-col s12 w3-small">
+        <div class="w3-col s12 w3-small w3-theme-l5 w3-round-xlarge w3-margin-bottom w3-container w3-tiny">
             <ol class="breadcrumb">
             {{ range .Ancestors.Reverse }}
                 <li>
@@ -26,28 +26,51 @@
             <li>{{.LinkTitle}}</li>
             </ol>
         </div>
-        <div class="w3-col s12">
-            <div class="w3-bar">
-                <img src="https://api.minimalavatars.com/avatar/author/svg" style="width: 62px; height: 62px;" class="w3-bar-item w3-circle" alt="author_avatar" />
-                <div class="w3-bar-item">
-                    <span class="w3-large">Admin</span> <br>
-                    {{ if .Date }}
-                    <time class="w3-tiny" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                        {{ .Date.Format "January 2, 2006" }}
-                    </time> | 
-                    {{ end }}<span class="w3-tiny">{{ .ReadingTime }} minutes read</span>
+        <div class="w3-col s12 w3-margin-bottom">
+            <div class="author-sharer w3-container w3-padding-16 w3-theme-l5 w3-round-xlarge">
+                <div class="author">
+                    <div class="author-image w3-margin-right">
+                        <img src="https://api.minimalavatars.com/avatar/author/svg" class="w3-border w3-circle" alt="Avatar of author" />
+                    </div>
+                    <div class="author-details">
+                        <div class="author-details-title w3-large">Admin</div>
+                        {{ if .Date }}
+                        <time class="w3-tiny" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                            {{ .Date.Format "January 2, 2006" }}
+                        </time> | 
+                        {{ end }}<span class="w3-tiny">{{ .ReadingTime }} minutes read</span>
+                    </div>
                 </div>
+                <div class="shareit w3-round-xlarge w3-hide-small">
+                    <!-- facebook -->
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink | safeURL }}"
+                        title="facebook"><i class="fa fa-facebook"></i></a>
+                
+                    <!-- twitter -->
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text={{.Title | safeURL }}&url={{.Permalink | safeURL }}"
+                        title="twitter"><i class="fa fa-twitter"></i></a>
+                
+                    <!-- linkedin -->
+                    <a class="linkedin"
+                        href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink | safeURL }}&title={{.Title | safeURL }}"
+                        title="linkedin"><i class="fa fa-linkedin"></i></a>
+                
+                    <!-- reddit -->
+                    <a class="reddit" href="https://www.reddit.com/submit?url={{.Permalink | safeURL }}&title={{.Title | safeURL }}"
+                        title="reddit"><i class="fa fa-reddit"></i></a>
+                
+                    <!-- tumblr -->
+                    <a class="tumblr"
+                        href="https://www.tumblr.com/share/link?url={{.Permalink | safeURL }}&name={{.Title | safeURL }}&description={{.Description | safeURL }}"
+                        title="tumblr"><i class="fa fa-tumblr"></i></a>
+                
+                    <!-- pinterest -->
+                    <a class="pinterest"
+                        href="https://pinterest.com/pin/create/button/?url={{.Permalink | safeURL }}&media={{.Params.image.url | safeURL }}&description={{.Title | safeURL }}"
+                        title="pinterest"><i class="fa fa-pinterest-p"></i></a>
+                </div>    
             </div>
-
-        </div>
-        <div class="w3-col s12 m8 w3-container w3-round-xlarge w3-theme-l5 w3-margin-bottom">
-            {{ if eq .Section "posts" }}
-                <div class="w3-margin-top"><b>Table of Contents</b></div>
-                {{ .TableOfContents }}
-            {{ end }}
-            <p>{{ .Content }}</p>
-
-            <div class="shareit">
+            <div class="shareit w3-round-xlarge w3-hide-medium w3-hide-large w3-margin-top">
                 <!-- facebook -->
                 <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink | safeURL }}"
                     title="facebook"><i class="fa fa-facebook"></i></a>
@@ -74,8 +97,17 @@
                 <a class="pinterest"
                     href="https://pinterest.com/pin/create/button/?url={{.Permalink | safeURL }}&media={{.Params.image.url | safeURL }}&description={{.Title | safeURL }}"
                     title="pinterest"><i class="fa fa-pinterest-p"></i></a>
+            </div>    
+
+        </div>
+        <div class="w3-col s12 m8 w3-container w3-round-xlarge w3-theme-l5 w3-margin-bottom">
+            {{ if eq .Section "posts" }}
+                <div class="w3-margin-top"><b>Table of Contents</b></div>
+                {{ .TableOfContents }}
+            {{ end }}
+            <div class="blog-post">
+                <p>{{ .Content }}</p>            
             </div>
-            
         </div>
         <div class="w3-col s12 m4 w3-container">
             <div class="w3-border w3-round-xlarge w3-margin-bottom">

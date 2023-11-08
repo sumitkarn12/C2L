@@ -4,7 +4,7 @@ title: "The Ultimate Guide to Choosing the Best Collagen Supplements"
 description: "Discover the top collagen supplements for youthful skin, strong bones, and overall wellness. Make an informed choice with our expert guide."
 date: "2023-11-01"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/rpPrxSg3/collagen.webp"
     alt: "Guide to choose Best Collagen Supplements"
 ---
 

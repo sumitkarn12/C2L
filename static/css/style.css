@@ -144,6 +144,10 @@ h6 {
   /* width: 786px; */
   /* width: 100%; */
 }
+.blog-post a {
+  text-decoration: underline;
+  color: #3b5998;
+}
 .blog-img-wrapper {
   height: 150px;
   overflow: hidden;
@@ -159,12 +163,6 @@ h6 {
 .breadcrumb li+li:before {
   padding: 4px;
   content: "/\00a0";
-}
-.breadcrumb li a {
-  text-decoration: none;
-}
-.breadcrumb li a:hover {
-  text-decoration: underline;
 }
 
 .blogs a:link {
@@ -185,6 +183,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .shareit a {
@@ -279,4 +278,18 @@ dialog::backdrop {
 dialog {
   padding: 0;
   border: none;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+}
+.author .author-image img {
+  width: 42px;
+  height: 42px;
+}
+
+.author-sharer {
+  display: flex;
+  justify-content: space-between;
 }

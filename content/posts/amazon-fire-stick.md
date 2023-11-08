@@ -4,7 +4,7 @@ title: "Unleash Entertainment Magic with Amazon Fire Stick | Ultimate Streaming 
 description: "Discover the Amazon Fire Stick's incredible features and why customers love it. Elevate your streaming experience today!"
 date: "2023-11-06"
 image:
-    url: "https://i.ibb.co/wRpNsm1/ratings.webp"
+    url: "https://i.postimg.cc/gcf14Qnk/title.webp"
     alt: "Why Amazon Fire Stick is popular?"
 ---
 
