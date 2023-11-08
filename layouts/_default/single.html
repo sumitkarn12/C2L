@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
 
-
 <section class="main-landing-page">
     <div class="desktop-width">
         <h1 class="w3-center w3-xlarge">{{ .Title }}</h1>
@@ -27,15 +26,24 @@
             <li>{{.LinkTitle}}</li>
             </ol>
         </div>
+        <div class="w3-col s12">
+            <div class="w3-bar">
+                <img src="https://api.minimalavatars.com/avatar/author/svg" style="width: 62px; height: 62px;" class="w3-bar-item w3-circle" alt="author_avatar" />
+                <div class="w3-bar-item">
+                    <span class="w3-large">Admin</span> <br>
+                    {{ if .Date }}
+                    <time class="w3-tiny" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                        {{ .Date.Format "January 2, 2006" }}
+                    </time> | 
+                    {{ end }}<span class="w3-tiny">{{ .ReadingTime }} minutes read</span>
+                </div>
+            </div>
+
+        </div>
         <div class="w3-col s12 m8 w3-container w3-round-xlarge w3-theme-l5 w3-margin-bottom">
             {{ if eq .Section "posts" }}
                 <div class="w3-margin-top"><b>Table of Contents</b></div>
                 {{ .TableOfContents }}
-            {{ end }}
-            {{ if .Date }}
-            <time class="w3-tiny w3-tag w3-round-xlarge" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                {{ .Date.Format "January 2, 2006" }}
-            </time>
             {{ end }}
             <p>{{ .Content }}</p>
 
