@@ -25,14 +25,34 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .subhero { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch; }
 .subhero img { object-fit: cover; object-position: top center; width: 100%; }
 
-.challenges .f82 { font-size: 82px; }
+.challenges {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	overscroll-behavior: contain;
+	user-select: none;
+	padding-bottom: 4px;
+	scroll-snap-type: x mandatory;
+}
+.challenges::-webkit-scrollbar { background-color: transparent; height: 2px; }
+.challenges::-webkit-scrollbar-thumb { background-color: #0077b5; border-radius: 12px; }
+.challenges::-webkit-scrollbar-track { background-color: transparent; }
+.challenges .cards {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	gap: 16px;
+	width: min-content;
+}
+.challenges .cards .card { padding: 16px; width: 275px; display: flex;justify-content: center; align-items: center; flex-direction: column; gap: 8px; scroll-snap-align: center; }
+.challenges .cards .card .media { font-size: 72px; }
+.challenges .cards .card h2, .challenges .cards .card p { margin: 0; padding: 0; }
+
 #alert { display: none; }
 #sidebar { width: 320px; display: none; }
 #sidebar p { margin: 0; }
 .solutions .card { overflow: hidden; }
 .solutions .card img { width: 100%; }
-.challenges .w3-card { min-height: 370px; }
-.challenges .w3-card .w3-container { min-height: 90px; }
 .partnerships .card { min-height: 260px; overflow: hidden; }
 .platforms img { width: 120px; height: 120px; }
 
