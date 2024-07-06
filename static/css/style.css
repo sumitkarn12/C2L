@@ -19,28 +19,11 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .hero h1 { margin: 0; padding: 0; }
 .hero a { text-decoration: none; }
 
-.hero .platforms-card {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 16px;
-	flex-wrap: wrap;
-}
+.hero .platforms-card { width: 100%; display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; }
 .hero .platforms-card > *, .hero .platforms-card > a > img { --h: 70px; width: var(--h); height: var(--h); }
 .hero .platforms-card > a > img, .hero .platforms-card > div {  border: 2px solid #fff; }
-
-.subhero {
-	display: grid;
-	gap: 16px;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	align-items: stretch;
-}
-.subhero img {
-	object-fit: cover;
-	object-position: top center;
-	width: 100%;
-}
+.subhero { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch; }
+.subhero img { object-fit: cover; object-position: top center; width: 100%; }
 
 .challenges .f82 { font-size: 82px; }
 #alert { display: none; }
