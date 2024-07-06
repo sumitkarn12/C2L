@@ -28,6 +28,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 	flex-wrap: wrap;
 }
 .hero .platforms-card > *, .hero .platforms-card > a > img { --h: 70px; width: var(--h); height: var(--h); }
+.hero .platforms-card > a > img, .hero .platforms-card > div {  border: 2px solid #fff; }
 
 
 .main-page-header .desktop-width { position: relative; top: -40px; }
