@@ -88,6 +88,15 @@
   //   });
   // }
 
+  document.querySelector(".w3-sidebar-closer").addEventListener("click", ( ev ) => {
+	ev.preventDefault();
+	document.querySelector("#menu-modal").style.display = 'none'
+  });
+  document.querySelector(".w3-sidebar-opener").addEventListener("click", ( ev ) => {
+    ev.preventDefault();
+    document.querySelector("#menu-modal").style.display = 'block'
+  });
+
   function getUUID() {
     let uuid = localStorage.getItem( "uuid" );
     if ( uuid === null || uuid.length != 36 ) {

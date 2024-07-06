@@ -1,69 +1,24 @@
-<nav class="topbar navbar w3-top">
-	<div class="desktop-width w3-theme-l1 w3-card-4">
-		<a href="/">
-			<img src="{{ .Site.Params.logo}}" class="w3-bar-item nav-logo" style="margin: 0; padding: 0;"
-				alt="Logo of C2L">
-		</a>
-		<div class="w3-bar bar w3-hide-small">
-			{{ $p := . }}
-			{{ range .Site.Menus.nav }}
-			{{ if $p.IsMenuCurrent .Menu . }}
-			<a href="{{.URL}}" class="w3-bar-item w3-theme w3-button w3-round-large">{{.Name}}</a>
-			{{ else if .HasChildren }}
-			<div class="w3-dropdown-hover">
-				<button class="w3-button w3-round-large">{{title .Name}} <i class="fa fa-caret-down"></i></button>
-				<div class="w3-dropdown-content w3-bar-block w3-card-4 w3-round-xlarge w3-container w3-padding-16">
-					{{ range .Children}}
-					{{ if $p.IsMenuCurrent .Menu . }}
-					<a href="{{.URL}}" class="w3-bar-item w3-button w3-theme w3-round-large">{{.Name}}</a>
-					{{ else }}
-					<a href="{{.URL}}" class="w3-bar-item w3-button w3-round-large">{{.Name}}</a>
-					{{ end }}
-					{{ end }}
-				</div>
-			</div>
-
-			{{ else }}
-			<a href="{{.URL}}" class="w3-bar-item w3-button w3-round-large">{{.Name}}</a>
-			{{ end }}
-			{{ end }}
-			<a href="#" class="w3-bar-item w3-button w3-round-large" onclick="toggleRequestCallback()">Request
-				callback</a>
-		</div>
-		<button aria-label="Button to open menu in mobile devices" onclick="toggleMenu()"
-			class="toggle-menu w3-button w3-xlarge w3-circle w3-hide-medium w3-hide-large">
-			<i class="fa fa-bars"></i>
-		</button>
-	</div>
+<nav class="navbar desktop-width space-between">
+	<a href="/">
+		<img src="{{ .Site.Params.logo}}" class="nav-logo" alt="Logo of C2L">
+	</a>
+	<button onclick="toggleMenu()" class="w3-theme w3-sidebar-opener nav-button toggle-menu w3-button w3-xlarge w3-circle"><i class="fa fa-bars"></i></button>
 </nav>
 
-<dialog id="menu-modal" class="w3-card-4 w3-round-xlarge w3-animate-zoom">
-	<div>
-		<div id="menu-modal-top" class="w3-border-bottom">
-			<a href="/" class="w3-button w3-theme-l1"><i class="fa fa-home"></i></a>
-			<span> {{.Site.Params.name}}</span>
-			<button onclick="toggleMenu( true )" class="w3-button w3-theme-l1"><i class="fa fa-close"></i></button>
-		</div>
-		<div class="mobile-navbar w3-padding-16 w3-container">
-			<button class="w3-bar-item w3-button w3-round-large" onclick="toggleRequestCallback()">Request
-				callback</button>
-			{{ $p := . }}
-			{{ range .Site.Menus.nav }}
-			{{ if $p.IsMenuCurrent .Menu . }}
-			<a href="{{.URL}}" class="w3-theme-l5 w3-round-large w3-button">{{.Name}}</a>
-			{{ else if .HasChildren }}
-			<hr>
-			{{ range .Children}}
-			{{ if $p.IsMenuCurrent .Menu . }}
-			<a href="{{.URL}}" class="w3-theme-l5 w3-button w3-round-large"><i class="fa fa-link"></i> {{.Name}}</a>
+<div id="menu-modal" class="w3-sidebar w3-card-4 w3-animate-right">
+	<button class="w3-button w3-sidebar-closer w3-xlarge w3-theme w3-card w3-circle"><i class="fa fa-close"></i></button>
+	<div class="w3-sidebar-content">
+		<button class="w3-bar-item w3-button w3-round-large" onclick="toggleRequestCallback()">Request callback</button>
+		{{ $p := . }}
+		{{ range .Site.Menus.nav }}
+			{{ if .HasChildren }}
+				<div class="w3-xlarge w3-right w3-margin-top">Services</div>
+				{{ range .Children}}
+					<a href="{{.URL}}" class="{{ if $p.IsMenuCurrent .Menu . }}w3-theme-l5 {{end}}w3-button w3-round-large">{{.Name}}</a>
+				{{ end }}
 			{{ else }}
-			<a href="{{.URL}}" class="w3-button w3-round-large"><i class="fa fa-link"></i> {{.Name}}</a>
+				<a href="{{.URL}}" class="{{ if $p.IsMenuCurrent .Menu . }}w3-theme-l5 {{end}}w3-button w3-round-large">{{.Name}}</a>
 			{{ end }}
-			{{ end }}
-			{{ else }}
-			<a href="{{.URL}}" class="w3-button w3-round-large">{{.Name}}</a>
-			{{ end }}
-			{{ end }}
-		</div>
+		{{ end }}
 	</div>
-</dialog>
+</div>

@@ -1,7 +1,7 @@
 /* LAYOUT */
 html { scroll-behavior: smooth; }
 
-body { color: #333; margin: 0 auto; overflow-x: hidden; font-family: 'Poppins', sans-serif; }
+body { color: #333; margin: 0 auto; font-family: 'Poppins', sans-serif; }
 
 h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .desktop-width { max-width: 1024px; margin: auto; }
@@ -20,8 +20,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .main-page-header .desktop-width { position: relative; top: -40px; }
 .challenges .f82 { font-size: 82px; }
 #alert { display: none; }
-.flex-center { display: flex; justify-content: center; align-items: center; }
-.nav-logo { width: 62px; height: 62px; }
 #sidebar { width: 320px; display: none; }
 #sidebar p { margin: 0; }
 .main-page-header img { width: 256px; height: 256px; }
@@ -31,6 +29,32 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .challenges .w3-card .w3-container { min-height: 90px; }
 .partnerships .card { min-height: 260px; overflow: hidden; }
 .platforms img { width: 120px; height: 120px; }
+
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.space-between { display: flex; justify-content: space-between; align-items: center; }
+.navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 2; background-color: #fff; border-radius: 0 0 16px 16px; }
+.navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
+
+#menu-modal {
+	display: none;
+	width: 70%;
+	right: 0;
+	top:0;
+	z-index: 2;
+	overflow: visible;
+}
+
+#menu-modal .w3-sidebar-closer { position: absolute; top: 32px; transform: translateX(-50%); }
+#menu-modal .w3-sidebar-content  {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 16px;
+	gap:16px;
+}
+#menu-modal .w3-sidebar-content > *  { text-wrap: wrap; }
 
 #id01 .w3-modal-content {
   max-width: 600px;
@@ -153,25 +177,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
   user-select: none;
 }
 
-.navbar { transition: all 0.5s; }
-.bar { transition: all 0.5s; }
-.topbar { width: 100%; }
-.topbar>div {
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 16px auto;
-}
-
-#menu-modal>div {
-  overflow: hidden;
-}
-#menu-modal-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .bar {
   display: flex;
   justify-content: space-between;
