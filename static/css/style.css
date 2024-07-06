@@ -30,13 +30,22 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .hero .platforms-card > *, .hero .platforms-card > a > img { --h: 70px; width: var(--h); height: var(--h); }
 .hero .platforms-card > a > img, .hero .platforms-card > div {  border: 2px solid #fff; }
 
+.subhero {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	align-items: stretch;
+}
+.subhero img {
+	object-fit: cover;
+	object-position: top center;
+	width: 100%;
+}
 
-.main-page-header .desktop-width { position: relative; top: -40px; }
 .challenges .f82 { font-size: 82px; }
 #alert { display: none; }
 #sidebar { width: 320px; display: none; }
 #sidebar p { margin: 0; }
-.main-page-header img { width: 256px; height: 256px; }
 .solutions .card { overflow: hidden; }
 .solutions .card img { width: 100%; }
 .challenges .w3-card { min-height: 370px; }
