@@ -1,29 +1,10 @@
 /* LAYOUT */
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-body {
-  color: #333;
-  margin: 0 auto;
-  overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-}
+body { color: #333; margin: 0 auto; overflow-x: hidden; font-family: 'Poppins', sans-serif; }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Poppins', sans-serif;
-}
-
-.desktop-width {
-  max-width: 1024px;
-  margin: auto;
-}
-
+h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
+.desktop-width { max-width: 1024px; margin: auto; }
 .main-landing-page {
   width: 100%;
   background-image: url(//i.ibb.co/41FtsVT/brooke-cagle-WHWYBmtn3-0-unsplash.webp);
@@ -34,78 +15,22 @@ h6 {
   background-blend-mode: soft-light;
 }
 
-.main-landing-page .desktop-width h1 {
-  line-height: 1.2;
-}
-
-.main-landing-page .desktop-width {
-  padding: 120px 22px;
-  color: #fff;
-}
-
-.main-page-header .desktop-width {
-  position: relative;
-  top: -40px;
-}
-
-.challenges .f82 {
-  font-size: 82px;
-}
-
-#alert {
-  display: none;
-}
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-logo {
-  width: 62px;
-  height: 62px;
-}
-
-#sidebar {
-  width: 320px;
-  display: none;
-}
-
-#sidebar p {
-  margin: 0;
-}
-
-.main-page-header img {
-  width: 256px;
-  height: 256px;
-}
-
-.solutions .card {
-  overflow: hidden;
-}
-
-.solutions .card img {
-  width: 100%;
-}
-
-.challenges .w3-card {
-  min-height: 370px;
-}
-
-.challenges .w3-card .w3-container {
-  min-height: 90px;
-}
-
-.partnerships .card {
-  min-height: 260px;
-  overflow: hidden;
-}
-
-.platforms img {
-  width: 120px;
-  height: 120px;
-}
+.main-landing-page .desktop-width h1 { line-height: 1.2; }
+.main-landing-page .desktop-width { padding: 120px 22px; color: #fff; }
+.main-page-header .desktop-width { position: relative; top: -40px; }
+.challenges .f82 { font-size: 82px; }
+#alert { display: none; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.nav-logo { width: 62px; height: 62px; }
+#sidebar { width: 320px; display: none; }
+#sidebar p { margin: 0; }
+.main-page-header img { width: 256px; height: 256px; }
+.solutions .card { overflow: hidden; }
+.solutions .card img { width: 100%; }
+.challenges .w3-card { min-height: 370px; }
+.challenges .w3-card .w3-container { min-height: 90px; }
+.partnerships .card { min-height: 260px; overflow: hidden; }
+.platforms img { width: 120px; height: 120px; }
 
 #id01 .w3-modal-content {
   max-width: 600px;
@@ -228,16 +153,9 @@ h6 {
   user-select: none;
 }
 
-.navbar {
-  transition: all 0.5s;
-}
-
-.bar {
-  transition: all 0.5s;
-}
-.topbar {
-  width: 100%;
-}
+.navbar { transition: all 0.5s; }
+.bar { transition: all 0.5s; }
+.topbar { width: 100%; }
 .topbar>div {
   border-radius: 50px;
   display: flex;
