@@ -1,22 +1,21 @@
-<dialog id="id01" class="w3-card w3-animate-zoom w3-round-xlarge">
+<dialog id="id01" class="w3-card w3-animate-zoom w3-round-xlarge overflow-hidden">
     <div class="w3-container w3-theme">
-        <p class="w3-large">Book a free consultation</p>
+        <h3 class="w3-large">Book your free consultation</h3>
     </div>
     <form action="#" method="post" name="lead">
-        <div class="w3-section w3-container">
+        <div class="w3-container w3-padding-16">
             <label><b>Name</b></label>
             <input class="w3-input w3-round w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
             <label><b>Mobile number</b></label>
             <input class="w3-input w3-round w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
             <label><b>Email id</b></label>
             <input class="w3-input w3-round w3-border" type="email" placeholder="Enter your email" name="email" required>
+            <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme w3-hide">Thanks. We'll get in touch with you shortly.</p>
         </div>
         <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
             <button class="w3-button w3-round w3-theme w3-right" type="submit">Submit</button>
             <button onclick="toggleRequestCallback()" type="reset" class="w3-margin-right w3-button w3-round w3-right">Not interested</button>
         </div>
-        <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been
-          submitted and we'll get in touch with you shortly.</p>
       </form>
   </div>
 </dialog>
@@ -38,13 +37,6 @@
     </div>
 
     <div class="w3-col s12 m4 w3-container w3-padding newsletter">
-      <!-- <p class="w3-large w3-text-white">Signup our newsletter</p>
-      <form action="#" method="post" name="newsletter" class="w3-small w3-display-container">
-        <input class="w3-round-large w3-input" type="email" name="email" placeholder="Enter your email here" autocomplete="on" required />
-        <button class="w3-display-right w3-button w3-round-large w3-theme-d5"><i class="fa fa-check"></i> Signup</button>
-      </form>
-      <p id="alert" class="w3-round-xlarge w3-padding w3-container w3-theme-l5">That's great. We'll keep you posted.</p> -->
-    
       <p class="w3-large w3-text-white">Contacts</p>
       <div class="w3-text-white w3-margin-bottom">📧 <a href="mailto:{{.Site.Params.email}}">{{.Site.Params.email}}</a></div>
       <div class="w3-text-white w3-margin-bottom">📞 <a href="tel:{{.Site.Params.phone}}">{{.Site.Params.phone}}</a></div>
@@ -87,6 +79,7 @@
     document.querySelector(".w3-sidebar").style.display = 'block'
   });
 
+  // scroller events
   const next_card = ( ev ) => {
     let section = ev.currentTarget.parentNode.parentNode;
     let container = section.querySelector(".cards-container");
@@ -94,7 +87,6 @@
     let scrollX = container.scrollLeft;
     container.scrollLeft = scrollX + cardWidth;
   }
-
   const prev_card = ( ev ) => {
     let section = ev.currentTarget.parentNode.parentNode;
     let container = section.querySelector(".cards-container");
@@ -102,10 +94,8 @@
     let scrollX = container.scrollLeft;
     container.scrollLeft = scrollX - cardWidth;
   }
-
   document.querySelectorAll(".next-card button").forEach( btn => btn.addEventListener( "click", next_card ) );
   document.querySelectorAll(".prev-card button").forEach( btn => btn.addEventListener( "click", prev_card ) );
-
   document.querySelectorAll(".cards-container").forEach( element => {
     element.addEventListener('wheel', (event) => {
       event.preventDefault();
@@ -124,88 +114,33 @@
     return uuid;
   }
 
-  document.querySelectorAll( "form[name=newsletter]" ).forEach( elm => {
-    elm.addEventListener( 'submit', ev => {
-      ev.preventDefault();
-      ev.target.querySelector( "button" ).innerHTML = "<i class='fa fa-refresh'></i>"
-      let email = ev.target.querySelector( "input" ).value;
-      fetch( "https://c2l.thespj.workers.dev/newsletter", {
-        method:"POST",
-        body: JSON.stringify({"email": email, uuid: getUUID() })
-      }).catch( console.error ).finally( r =>{
-        setTimeout( ()=> {
-          ev.target.querySelector( "button" ).innerHTML = "<i class='fa fa-check'></i>"
-          ev.target.querySelectorAll("#alert").forEach( e => {
-            e.style.display = 'block'
-          });
-          setTimeout( () => {
-            ev.target.querySelectorAll("#alert").forEach( e => {
-              e.style.display = 'none'
-            });
-          }, 5000);
-        }, 1500)
-      })
-      return false;
-    });
-  });
-
   document.querySelectorAll( "form[name=lead]" ).forEach( f => {
     f.addEventListener( 'submit', ev => {
       ev.preventDefault();
-      let previousText = setLoadingButton(ev.target.querySelector( "button[type=submit]" ));
-      let email = ev.target.querySelector( "input[name=email]" ).value;
-      let name = ev.target.querySelector( "input[name=name]" ).value;
-      let mobile = ev.target.querySelector( "input[name=mobile]" ).value;
+      let btn = ev.target.querySelector( "button[type=submit]" );
+      btn.classList.add("spinner");
+      let data = Object.fromEntries( new FormData( ev.currentTarget ) );
+      data.uuid = getUUID();
       fetch( "https://c2l.thespj.workers.dev/lead", {
         method:"POST",
-        body: JSON.stringify({ "email": email, "name": name, "mobile": mobile, uuid: getUUID() })
+        body: JSON.stringify( data )
       }).catch( console.error ).finally( r =>{
-        setTimeout( ()=> {
-          removeLoadingButton( ev.target.querySelector( "button[type=submit]" ), previousText )
-          ev.target.querySelectorAll( "#alert" ).forEach(element => {
-            element.style.display = "block"
-          });
-          setTimeout( () => {
-            ev.target.querySelectorAll( "#alert" ).forEach(element => {
-              element.style.display = "none"
-            });
-            toggleRequestCallback( true );
-          }, 5000);
-        }, 1500)
+        btn.classList.remove("spinner");
+        ev.target.querySelectorAll( "#alert" ).forEach(element =>  element.classList.remove("w3-hide") );
+        setTimeout( () => {
+          ev.target.querySelectorAll( "#alert" ).forEach(element => element.classList.add("w3-hide") );
+          ev.target.querySelectorAll( "input" ).forEach(element => element.value = "" );
+          toggleRequestCallback( true );
+        }, 5000);
       })
-      return false;
     });
   });
 
-  function setLoadingButton( elm ) {
-    let toBeReplaced = elm.innerHTML;
-    elm.innerHTML = "<i class='fa fa-refresh w3-spin'></i>";
-    return toBeReplaced;
-  }
-
-  function removeLoadingButton( elm, afterText ) {
-    elm.innerHTML = afterText;
-  }
-
   function toggleRequestCallback( forceClose ) {
     let x = document.querySelector("#id01");
-    if ( forceClose ) {
-      x.close();
-    } else if ( x.open ) {
-      x.close();
-    } else {
-      x.showModal();
-    }
-  }
-  function toggleMenu( forceClose ) {
-    let x = document.querySelector("#menu-modal");
-    if ( forceClose ) {
-      x.close();
-    } else if ( x.open ) {
-      x.close();
-    } else {
-      x.showModal();
-    }
+    if ( forceClose || x.open )
+      return x.close();
+    x.showModal();
   }
 
 </script>

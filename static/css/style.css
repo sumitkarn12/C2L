@@ -6,27 +6,26 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .overflow-hidden { overflow: hidden; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 .space-between { display: flex; justify-content: space-between; align-items: center; }
+.spinner::before {
+  content: "\f021";
+  display: inline-block;
+  font-family: "FontAwesome";
+  margin-right: 8px;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(359deg);}
+}
 
 .navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 9; background-color: #fff; border-radius: 0 0 16px 16px; }
 .navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
 
 .w3-sidebar { display: none; width: 70%; right: 0; top:0; z-index: 99; overflow: visible; }
 .w3-sidebar-closer { position: absolute; top: 32px; transform: translateX(-50%); }
-.w3-sidebar-content > *  {
-  text-wrap: wrap;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  text-align: left;
-}
-.w3-sidebar-content  {
-  padding: 16px;
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20% 20% auto;
-  gap:16px;
-}
+.w3-sidebar-content > *  { text-wrap: wrap; display: flex; justify-content: flex-start; align-items: flex-end; text-align: left; }
+.w3-sidebar-content  { padding: 16px; display: grid; height: 100%; grid-template-columns: 1fr 1fr; grid-template-rows: 20% 20% auto; gap:16px; }
 .w3-sidebar-content .section, .w3-sidebar-content .submenu { grid-column: 1/3; }
 
 .hero {
@@ -78,15 +77,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 
 .recent-blogs-and-signup-form .blogs a { text-decoration: none; }
 .recent-blogs-and-signup-form { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
-
-#alert { display: none; }
-#sidebar { width: 320px; display: none; }
-#sidebar p { margin: 0; }
-
-#id01 .w3-modal-content {
-  max-width: 600px;
-  overflow: hidden;
-}
 
 .footer-wrapper {
   overflow: hidden;
