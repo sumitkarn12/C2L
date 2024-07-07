@@ -3,6 +3,7 @@ html { scroll-behavior: smooth; }
 body { color: #333; margin: 0 auto; font-family: 'Poppins', sans-serif; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .desktop-width { max-width: 1024px; margin: auto; }
+.overflow-hidden { overflow: hidden; }
 .hero {
 	min-height: calc(100svh - 194px);
 	background-image: url(//i.ibb.co/41FtsVT/brooke-cagle-WHWYBmtn3-0-unsplash.webp);
@@ -25,7 +26,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .subhero { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch; }
 .subhero img { object-fit: cover; object-position: top center; width: 100%; }
 
-.challenges {
+.challenges, .partnerships {
 	position: relative;
 	overflow: auto;
 	width: 100%;
@@ -34,10 +35,10 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 	padding-bottom: 4px;
 	scroll-snap-type: x mandatory;
 }
-.challenges::-webkit-scrollbar { background-color: transparent; height: 2px; }
-.challenges::-webkit-scrollbar-thumb { background-color: #0077b5; border-radius: 12px; }
-.challenges::-webkit-scrollbar-track { background-color: transparent; }
-.challenges .cards {
+.challenges::-webkit-scrollbar, .partnerships::-webkit-scrollbar { background-color: transparent; height: 2px; }
+.challenges::-webkit-scrollbar-thumb, .partnerships::-webkit-scrollbar-thumb { background-color: #0077b5; border-radius: 12px; }
+.challenges::-webkit-scrollbar-track, .partnerships::-webkit-scrollbar-track { background-color: transparent; }
+.challenges .cards, .partnerships .cards {
 	display: flex;
 	justify-content: center;
 	align-items: stretch;
@@ -47,13 +48,13 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .challenges .cards .card { padding: 16px; width: 275px; display: flex;justify-content: center; align-items: center; flex-direction: column; gap: 8px; scroll-snap-align: start; }
 .challenges .cards .card .media { font-size: 72px; }
 .challenges .cards .card h2, .challenges .cards .card p { margin: 0; padding: 0; }
+.partnerships .cards .card { width: 275px; height: 260px; scroll-snap-align: start; }
 
 #alert { display: none; }
 #sidebar { width: 320px; display: none; }
 #sidebar p { margin: 0; }
 .solutions .card { overflow: hidden; }
 .solutions .card img { width: 100%; }
-.partnerships .card { min-height: 260px; overflow: hidden; }
 .platforms img { width: 120px; height: 120px; }
 
 .flex-center { display: flex; justify-content: center; align-items: center; }
