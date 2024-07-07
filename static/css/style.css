@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .challenges::-webkit-scrollbar-track, .partnerships::-webkit-scrollbar-track { background-color: transparent; }
 .challenges .cards, .partnerships .cards {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: stretch;
 	gap: 16px;
 	width: min-content;
@@ -50,11 +50,26 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .challenges .cards .card h2, .challenges .cards .card p { margin: 0; padding: 0; }
 .partnerships .cards .card { width: 275px; height: 260px; scroll-snap-align: start; }
 
+.solutions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+.solutions .card {
+  position: relative;
+}
+.solutions .card img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  object-position: center;
+  aspect-ratio: 1/1;
+  opacity: 0.1;
+}
+
 #alert { display: none; }
 #sidebar { width: 320px; display: none; }
 #sidebar p { margin: 0; }
-.solutions .card { overflow: hidden; }
-.solutions .card img { width: 100%; }
 .platforms img { width: 120px; height: 120px; }
 
 .flex-center { display: flex; justify-content: center; align-items: center; }
