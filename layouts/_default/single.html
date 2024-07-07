@@ -52,19 +52,10 @@
         <div class="w3-col s12 m6 l4 w3-margin-top">
             {{ partial "capture-lead.html" . }}
 
-            <ul class="w3-ul w3-border w3-round-xxlarge overflow-hidden w3-margin-top">
-                <li class="w3-theme w3-center"><p>You should read these too</p></li>
-                {{ $current_page := .RelPermalink }}
-                {{ range first 10 (where .Site.AllPages "Section" "posts") }}
-                    {{ if eq .Section "posts" }}
-                        {{ if .IsPage }}
-                            {{if ne $current_page .RelPermalink}}
-                            <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-                            {{end}}
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-            </ul>
+            <div class="w3-margin-top">
+                {{ partial "recent_blogs.html" . }}
+            </div>
+
             <div style="text-align: left" class="sender-form-field w3-margin-top" data-sender-form-id="lnprezvsdnwgnedsyk4"></div>
         </div>
     </div>

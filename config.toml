@@ -13,22 +13,3 @@ baseURL = "https://c2l.asia/"
   linkedin = "https://www.linkedin.com/company/c2l-asia"
   facebook = "https://www.facebook.com/people/C2L/61552526977416/"
   description = "A provider of seller account management services. We help e-commerce sellers succeed on multiple platforms, including Amazon, Noon etc."
-
-[menu]
-  [[menu.main]]
-    identifier = "services"
-    name = "Services"
-    url = "/services"
-    weight = 20
-
-  [[menu.main]]
-    identifier = "others"
-    name = "Others"
-    url = "/others"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
-    weight = 30

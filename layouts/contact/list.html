@@ -1,50 +1,25 @@
 {{ partial "header.html" . }}
 
-<div class="navbar-separator"></div>
+<section class="desktop-width contact-us">
 
-<section class="desktop-width">
-  <div class="header-wrapper">
-    <h1 class="header">{{.Title}}</h1>
-  </div>
-  
-  <div class="w3-row w3-margin-top w3-margin-bottom blogs">
-    <div class="w3-col s12 m3 w3-container w3-padding-16">
-      <div class="w3-card w3-round-xlarge w3-container w3-margin-bottom">
-        <h2>Call</h2>
-        <a href="tel:{{.Site.Params.phone}}">{{.Site.Params.phone}}</a>
-      </div>
-      <div class="w3-card w3-round-xlarge w3-container w3-margin-bottom">
-        <h2>Email</h2>
-        <a href="mailto:{{.Site.Params.email}}">{{.Site.Params.email}}</a>
-      </div>
-      <div class="w3-card w3-round-xlarge w3-container w3-margin-bottom">
-        <h2>Address</h2>
-        <span>{{.Site.Params.address}}</span>
-      </div>
+  {{ partial "capture-lead.html" . }}
+  {{ partial "recent_blogs" . }}
+  <div class="card w3-theme-l5 w3-padding-16 w3-round-xxlarge w3-container w3-margin-bottom">
+    <div class="title">Address</div>
+    <div class=" content w3-xlarge">
+      <span>{{.Site.Params.address}}</span>
     </div>
-    <div class="w3-col s12 m9 w3-container w3-padding-16 ">
-      <div class="w3-card-4 w3-round-xlarge w3-margin-bottom">
-          <form action="#" method="post" name="lead" class="w3-container w3-padding-16">
-              <label><b>Name</b></label>
-              <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
-              <label><b>Mobile number</b></label>
-              <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
-              <label><b>Email id</b></label>
-              <input class="w3-input w3-round-large w3-border" type="email" placeholder="Enter your email" name="email" required>
-              <br>
-              <button class="w3-button w3-round-large w3-theme w3-block" type="submit">Submit</button>
-              <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been submitted and we'll get in touch with you shortly.</p>
-          </form>
-      </div>
-
-      <!-- Recent blogs -->
-
-      {{ partial "recent_blogs" . }}
-
-
-
-      <!-- Newsletter form -->
-      <!-- <div style="text-align: left" class="sender-form-field" data-sender-form-id="lnprezvsdnwgnedsyk4"></div> -->
+  </div>
+  <div class="card w3-theme-l5 w3-padding-16 w3-round-xxlarge w3-container w3-margin-bottom">
+    <div class="title">Call</div>
+    <div class=" content w3-xlarge">
+      <a href="tel:{{.Site.Params.phone}}">{{.Site.Params.phone}}</a>
+    </div>
+  </div>
+  <div class="card w3-theme-l5 w3-padding-16 w3-round-xxlarge w3-container w3-margin-bottom">
+    <div class="title title">Email</div>
+    <div class=" content w3-xlarge">
+      <a href="mailto:{{.Site.Params.email}}">{{.Site.Params.email}}</a>
     </div>
   </div>
 

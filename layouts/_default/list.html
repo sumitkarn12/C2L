@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-
 <section class="main-landing-page">
   <div class="desktop-width">
       <h2 class="w3-center">{{ .Title }}</h2>
@@ -13,9 +12,12 @@
 </section>
 
 <section class="desktop-width blog-layout w3-row-padding">
-    {{ .Content }}
 
     <div class="w3-col s12 m6 l8">
+      {{ if .Content }}
+        <p>{{.Content}}</p>
+      {{ end }}
+
       {{ $pages := .Data.Pages }}
       {{ $paginator := .Paginate $pages.ByDate.Reverse 6 }}
       <div class="blog-list">

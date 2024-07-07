@@ -5,20 +5,33 @@
 	<button class="w3-theme w3-sidebar-opener nav-button toggle-menu w3-button w3-xlarge w3-circle"><i class="fa fa-bars"></i></button>
 </nav>
 
-<div class="w3-sidebar w3-card-4 w3-animate-right">
-	<button class="w3-button w3-sidebar-closer w3-xlarge w3-theme w3-card w3-circle"><i class="fa fa-close"></i></button>
-	<div class="w3-sidebar-content">
-		<a href="/" class="w3-button w3-round-large menu w3-theme">Home</a>
-		{{ $p := . }}
-		{{ range .Site.Menus.nav }}
-			{{ if .HasChildren }}
-				<div class="w3-xlarge section">Services</div>
-				{{ range .Children}}
-					<a href="{{.URL}}" class="{{ if $p.IsMenuCurrent .Menu . }}w3-theme-l5 {{end}}w3-button w3-round-large submenu w3-border">{{.Name}}</a>
-				{{ end }}
-			{{ else }}
-				<a href="{{.URL}}" class="{{ if $p.IsMenuCurrent .Menu . }}w3-theme-l5 {{end}}w3-button w3-round-large menu w3-theme">{{.Name}}</a>
-			{{ end }}
+<div id="sidebar" class="w3-sidebar w3-animate-right">
+	<button class="w3-button w3-sidebar-closer w3-xlarge w3-theme w3-circle"><i class="fa fa-close"></i></button>
+	<div class="w3-sidebar-content w3-xlarge">
+		{{ $currentPage := .RelPermalink }}
+		{{ if ne $currentPage "/" }} <a href="/" class='w3-button w3-round-large menu w3-theme'>Home</a> {{ end }}
+		{{ range .Site.Sections }}
+			{{ if ne $currentPage .RelPermalink }}<a href="{{.RelPermalink}}" class="w3-button w3-round-large menu w3-theme">{{ .Title }}</a>{{ end }}
 		{{ end }}
 	</div>
 </div>
+
+<script>
+	const sidebar = document.querySelector("#sidebar");
+	const sidebar_closer = document.querySelector(".w3-sidebar-closer");
+	const sidebar_opener = document.querySelector(".w3-sidebar-opener");
+	const body = document.querySelector("body");
+	sidebar_closer.addEventListener("click", ( ev ) => {
+		ev.preventDefault();
+		sidebar.style.display = 'none'
+	});
+	sidebar_opener.addEventListener("click", ( ev ) => {
+		ev.preventDefault();
+		sidebar.style.display = 'block'
+	});
+	body.addEventListener("click", ( ev ) => {
+		console.log( ev.target.id )
+		if ( ev.target.id == "sidebar" )
+			sidebar.style.display = 'none'
+	});
+</script>

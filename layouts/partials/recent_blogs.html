@@ -1,10 +1,14 @@
-<ul class="w3-ul w3-border w3-round-xlarge">
-  <li><h2>Recent blogs</h2></li>
-  {{ range first 4 ((where .Site.Pages "Section" "=" "posts").ByDate).Reverse  }}
-  {{ if eq .Title "Posts" }}
-      {{ continue }}
+<ul class="w3-ul w3-border w3-round-xxlarge overflow-hidden recent-blogs w3-animate-zoom">
+  <li class="w3-theme w3-center"><p>You should read these too</p></li>
+  {{ $current_page := .RelPermalink }}
+  {{ range first 8 (where .Site.AllPages "Section" "posts") }}
+    {{ if eq .Section "posts" }}
+      {{ if .IsPage }}
+        {{if ne $current_page .RelPermalink}}
+          <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+        {{end}}
+      {{ end }}
+    {{ end }}
   {{ end }}
-  <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
-  {{ end }}
-  <li class="w3-large w3-center"><a href="/posts">Read more...</a></li>
+  <li class="w3-large w3-theme-l5 w3-center"><a href="/posts">Read more...</a></li>
 </ul>

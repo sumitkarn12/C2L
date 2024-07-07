@@ -1,13 +1,5 @@
 
 <div class="recent-blogs-and-signup-form desktop-width w3-margin-top w3-margin-bottom">
-    <ul class="w3-ul w3-border w3-round-xlarge blogs">
-        <li><h2>Recent blogs</h2></li>
-        {{ range first 6 ((where .Site.Pages "Section" "=" "posts").ByDate).Reverse  }}
-            {{ if ne .Title "Blogs" }}
-                <li><a href="{{ .RelPermalink }}">{{.Title}}</a></li>
-            {{ end }}
-        {{ end }}
-        <li class="w3-large w3-center"><a href="/posts">Read more...</a></li>
-    </ul>
+    {{ partial "recent_blogs.html" . }}
     <div class="sender-form-field flex-center" data-sender-form-id="lnprezvsdnwgnedsyk4"></div>
 </div>

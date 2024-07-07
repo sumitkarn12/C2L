@@ -53,15 +53,6 @@
 </div>
 
 <script>
-  document.querySelector(".w3-sidebar-closer").addEventListener("click", ( ev ) => {
-    ev.preventDefault();
-    document.querySelector(".w3-sidebar").style.display = 'none'
-  });
-  document.querySelector(".w3-sidebar-opener").addEventListener("click", ( ev ) => {
-    ev.preventDefault();
-    document.querySelector(".w3-sidebar").style.display = 'block'
-  });
-
   // scroller events
   const next_card = ( ev ) => {
     let section = ev.currentTarget.parentNode.parentNode;
