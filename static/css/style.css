@@ -4,6 +4,12 @@ body { color: #333; margin: 0 auto; font-family: 'Poppins', sans-serif; }
 h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .desktop-width { max-width: 1024px; margin: auto; }
 .overflow-hidden { overflow: hidden; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.space-between { display: flex; justify-content: space-between; align-items: center; }
+
+.navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 2; background-color: #fff; border-radius: 0 0 16px 16px; }
+.navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
+
 .hero {
 	min-height: calc(100svh - 194px);
 	background-image: url(//i.ibb.co/41FtsVT/brooke-cagle-WHWYBmtn3-0-unsplash.webp);
@@ -23,59 +29,31 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .hero .platforms-card { width: 100%; display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; }
 .hero .platforms-card > *, .hero .platforms-card > a > img { --h: 70px; width: var(--h); height: var(--h); }
 .hero .platforms-card > a > img, .hero .platforms-card > div {  border: 2px solid #fff; }
+
 .subhero { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch; }
 .subhero img { object-fit: cover; object-position: top center; width: 100%; }
 
-.challenges, .partnerships {
-	position: relative;
-	overflow: auto;
-	width: 100%;
-	overscroll-behavior: contain;
-	user-select: none;
-	padding-bottom: 4px;
-	scroll-snap-type: x mandatory;
-}
+.challenges, .partnerships { position: relative; overflow: auto; width: 100%; overscroll-behavior: contain; user-select: none; padding-bottom: 4px; scroll-snap-type: x mandatory; }
 .challenges::-webkit-scrollbar, .partnerships::-webkit-scrollbar { background-color: transparent; height: 2px; }
 .challenges::-webkit-scrollbar-thumb, .partnerships::-webkit-scrollbar-thumb { background-color: #0077b5; border-radius: 12px; }
 .challenges::-webkit-scrollbar-track, .partnerships::-webkit-scrollbar-track { background-color: transparent; }
-.challenges .cards, .partnerships .cards {
-	display: flex;
-	justify-content: flex-start;
-	align-items: stretch;
-	gap: 16px;
-	width: min-content;
-}
+.challenges .cards, .partnerships .cards { display: flex; justify-content: flex-start; align-items: stretch; gap: 16px; width: min-content; }
 .challenges .cards .card { padding: 16px; width: 275px; display: flex;justify-content: center; align-items: center; flex-direction: column; gap: 8px; scroll-snap-align: start; }
 .challenges .cards .card .media { font-size: 72px; }
 .challenges .cards .card h2, .challenges .cards .card p { margin: 0; padding: 0; }
+
 .partnerships .cards .card { width: 275px; height: 260px; scroll-snap-align: start; }
 
-.solutions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
-}
-.solutions .card {
-  position: relative;
-}
-.solutions .card img {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  object-position: center;
-  aspect-ratio: 1/1;
-  opacity: 0.1;
-}
+.solutions { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.solutions .card { position: relative; border: 1px solid lightgray; }
+.solutions .card img { position: absolute; z-index: -1; width: 100%; object-position: center; aspect-ratio: 1/1; opacity: 0.1; }
+
+.recent-blogs-and-signup-form .blogs a { text-decoration: none; }
+.recent-blogs-and-signup-form { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
 
 #alert { display: none; }
 #sidebar { width: 320px; display: none; }
 #sidebar p { margin: 0; }
-.platforms img { width: 120px; height: 120px; }
-
-.flex-center { display: flex; justify-content: center; align-items: center; }
-.space-between { display: flex; justify-content: space-between; align-items: center; }
-.navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 2; background-color: #fff; border-radius: 0 0 16px 16px; }
-.navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
 
 #menu-modal {
 	display: none;
