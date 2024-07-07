@@ -75,24 +75,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 #request-callback .close { position: absolute; right: 0; transform: translate(50%, -50%); }
 
 .blog-layout { padding: 16px; }
-.blog-layout .pagination {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-.blog-layout .pagination .page-link {
-  border: 0;
-  outline: 0;
-  width: 32px;
-  height: 32px;
-  display: block;
-  display: grid;
-  place-content: center;
-  text-decoration: none;
-}
+.blog-layout .pagination { list-style: none; padding: 0; display: flex; justify-content: center; align-items: center; gap: 8px; }
+.blog-layout .pagination .page-link { border: 0; outline: 0; width: 32px; height: 32px; display: block; display: grid; place-content: center; text-decoration: none; }
 
 .blog-layout .pagination .page-item { border-radius: 16px; background-color: antiquewhite; }
 .blog-layout .pagination .page-item.active { background-color: #0077b5; color: #fff; cursor: none; transform: scale(1.02); }
@@ -127,65 +111,5 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .tumblr { background: #000000; }
 .pinterest { background: #cb2027; }
 
-
-
-.blogs a:link {
-  text-decoration: none;
- }
- .blogs .w3-card {
-  overflow: hidden;
-  height: 180px;
- }
- .blogs .w3-card>div {
-  width: 75%;
-  height: 180px; 
-  box-sizing: border-box;
-}
-
-
-
-.header-wrapper {
-  height: 100vh;
-  position: fixed;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  z-index: -999;
-}
-
-.header {
-  text-align: center;
-  color: #00000010;
-  font-size: 144px;
-  font-weight: bolder;
-  user-select: none;
-}
-
-.bar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.follow {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.mobile-navbar .w3-button {
-  display: table;
-}
-
-.navbar-separator {
-  margin-top: 102px;
-}
-
-dialog::backdrop {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(3px);
-  transition: all 0.5s;
-}
-dialog {
-  padding: 0;
-  border: none;
-}
+dialog::backdrop { background: rgba(255, 255, 255, 0); backdrop-filter: blur(3px); transition: all 0.5s; }
+dialog { padding: 0; border: none; }
