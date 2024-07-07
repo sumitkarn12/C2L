@@ -37,9 +37,10 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .challenges::-webkit-scrollbar, .partnerships::-webkit-scrollbar { background-color: transparent; height: 2px; }
 .challenges::-webkit-scrollbar-thumb, .partnerships::-webkit-scrollbar-thumb { background-color: #0077b5; border-radius: 12px; }
 .challenges::-webkit-scrollbar-track, .partnerships::-webkit-scrollbar-track { background-color: transparent; }
+
 .challenges .cards, .partnerships .cards { display: flex; justify-content: flex-start; align-items: stretch; gap: 16px; width: min-content; }
-.challenges .cards .card { padding: 16px; width: 275px; display: flex;justify-content: center; align-items: center; flex-direction: column; gap: 8px; scroll-snap-align: start; }
-.challenges .cards .card .media { font-size: 72px; }
+.challenges .cards .card { padding: 16px; width: 275px; display: flex;justify-content: flex-start; align-items: center; flex-direction: column; gap: 8px; scroll-snap-align: start; position: relative; }
+.challenges .cards .card .media { font-size: 146px; opacity: 0.1; position: absolute; top: 0; left: 0; transform: translate(-30%, -30%); }
 .challenges .cards .card h2, .challenges .cards .card p { margin: 0; padding: 0; }
 
 .partnerships .cards .card { width: 275px; height: 260px; scroll-snap-align: start; }
