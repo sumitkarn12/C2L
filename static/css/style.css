@@ -7,7 +7,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 .space-between { display: flex; justify-content: space-between; align-items: center; }
 
-.navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 2; background-color: #fff; border-radius: 0 0 16px 16px; }
+.navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 999; background-color: #fff; border-radius: 0 0 16px 16px; }
 .navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
 
 .hero {
@@ -33,7 +33,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .subhero { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: stretch; }
 .subhero img { object-fit: cover; object-position: top center; width: 100%; }
 
-.challenges, .partnerships { position: relative; overflow: auto; width: 100%; overscroll-behavior: contain; user-select: none; padding-bottom: 4px; scroll-snap-type: x mandatory; }
+.challenges, .partnerships { position: relative; width: 100%; user-select: none; padding-bottom: 4px; }
 .challenges::-webkit-scrollbar, .partnerships::-webkit-scrollbar { background-color: transparent; height: 2px; }
 .challenges::-webkit-scrollbar-thumb, .partnerships::-webkit-scrollbar-thumb { background-color: #0077b5; border-radius: 12px; }
 .challenges::-webkit-scrollbar-track, .partnerships::-webkit-scrollbar-track { background-color: transparent; }
@@ -42,6 +42,12 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .challenges .cards .card { padding: 16px; width: 275px; display: flex;justify-content: flex-start; align-items: center; flex-direction: column; gap: 8px; scroll-snap-align: start; position: relative; }
 .challenges .cards .card .media { font-size: 146px; opacity: 0.1; position: absolute; top: 0; left: 0; transform: translate(-30%, -30%); }
 .challenges .cards .card h2, .challenges .cards .card p { margin: 0; padding: 0; }
+
+.cards-container { overflow: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scroll-behavior: smooth; }
+.cards-container::-webkit-scrollbar, .partnerships::-webkit-scrollbar { background-color: transparent; height: 0px; }
+.next-card, .prev-card { position: absolute; height: 100%; z-index: 2; top: 0;; }
+.prev-card { left: 0; }
+.next-card { right: 0; }
 
 .partnerships .cards .card { width: 275px; height: 260px; scroll-snap-align: start; }
 

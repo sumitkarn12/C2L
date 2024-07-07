@@ -87,6 +87,34 @@
     document.querySelector("#menu-modal").style.display = 'block'
   });
 
+  const next_card = ( ev ) => {
+    let section = ev.currentTarget.parentNode.parentNode;
+    let container = section.querySelector(".cards-container");
+    let cardWidth = section.querySelector(".cards-container .card").getBoundingClientRect().width;
+    let scrollX = container.scrollLeft;
+    container.scrollLeft = scrollX + cardWidth;
+  }
+
+  const prev_card = ( ev ) => {
+    let section = ev.currentTarget.parentNode.parentNode;
+    let container = section.querySelector(".cards-container");
+    let cardWidth = section.querySelector(".cards-container .card").getBoundingClientRect().width;
+    let scrollX = container.scrollLeft;
+    container.scrollLeft = scrollX - cardWidth;
+  }
+
+  document.querySelectorAll(".next-card button").forEach( btn => btn.addEventListener( "click", next_card ) );
+  document.querySelectorAll(".prev-card button").forEach( btn => btn.addEventListener( "click", prev_card ) );
+
+  document.querySelectorAll(".cards-container").forEach( element => {
+    element.addEventListener('wheel', (event) => {
+      event.preventDefault();
+      let cardWidth = element.querySelector(".card").getBoundingClientRect().width;
+      let scrollX = element.scrollLeft;
+      element.scrollLeft =  event.deltaY < 0 ? scrollX - cardWidth : scrollX + cardWidth;
+    });
+  });
+
   function getUUID() {
     let uuid = localStorage.getItem( "uuid" );
     if ( uuid === null || uuid.length != 36 ) {
