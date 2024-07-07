@@ -79,12 +79,12 @@
 
 <script>
   document.querySelector(".w3-sidebar-closer").addEventListener("click", ( ev ) => {
-	ev.preventDefault();
-	document.querySelector("#menu-modal").style.display = 'none'
+    ev.preventDefault();
+    document.querySelector(".w3-sidebar").style.display = 'none'
   });
   document.querySelector(".w3-sidebar-opener").addEventListener("click", ( ev ) => {
     ev.preventDefault();
-    document.querySelector("#menu-modal").style.display = 'block'
+    document.querySelector(".w3-sidebar").style.display = 'block'
   });
 
   const next_card = ( ev ) => {
