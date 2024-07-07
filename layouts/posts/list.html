@@ -5,57 +5,43 @@
       <h2 class="w3-center">{{ .Title }}</h2>
       <ol class="breadcrumb w3-center">
         {{ range .Ancestors.Reverse }}
-        <li>
-            <a href="{{ .Permalink }}">{{ if .IsHome }}Home{{ else }}{{ .LinkTitle }}{{ end }}</a>
-        </li>
+        <li><a href="{{ .Permalink }}">{{ if .IsHome }}Home{{ else }}{{ .LinkTitle }}{{ end }}</a></li>
         {{ end }}
         <li>{{.LinkTitle}}</li>
     </ol>
 </div>
 </section>
 
-<section class="desktop-width">
+<section class="desktop-width blog-layout w3-row-padding">
     {{ .Content }}
 
-    <div class="w3-row w3-margin-top w3-margin-bottom blogs">
-      <ul class="w3-ul w3-border w3-round-xlarge w3-col s12 m6">
-        {{ range.Data.Pages }}
-          <li class="w3-padding-16">
+    <div class="w3-col s12 m6 l8">
+      {{ $pages := .Data.Pages }}
+      {{ $paginator := .Paginate $pages.ByDate.Reverse 7 }}
+      <div class="blog-list">
+        {{ range $paginator.Pages }}      
+          <div class="blog-list-item w3-round-xxlarge w3-container w3-padding-16 w3-theme-l5 ">
             <a href="{{ .RelPermalink }}">
-              <div class="blog-img-wrapper">
-                <img src="{{.Params.image.url}}" alt="{{ .Params.image.alt }}" class="w3-block" />
+              <img src="{{.Params.image.url}}" alt="{{ .Params.image.alt }}" class="w3-block w3-image w3-round-xlarge" />
+              <div class="reading-time w3-small w3-tag w3-theme w3-round-xlarge">{{.ReadingTime}} minute read</div>
+              <div class="content w3-margin-top">
+                <div class="title w3-large w3-text-theme">{{.Title}}</div>
+                <div class="summary w3-tiny">{{.Summary}}</div>
+                <a href="{{.RelPermalink}}" class="w3-theme w3-button w3-round-xlarge w3-margin-top">Read now</a>
               </div>
-                  <h2 class="w3-medium">{{.Title}}</h2>
-                  <!-- {{ if .Date }}
-                    <time class="w3-tag w3-theme w3-tiny w3-round-large" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                      {{ .Date.Format "January 2, 2006" }}
-                    </time>
-                  {{ end }} -->
             </a>
-          </li>
+          </div>
         {{ end }}
-      </ul>
-      <div class="w3-col s12 m1 w3-padding-16"></div>
-      <div class="w3-col s12 m5">
-        <div class="w3-border w3-round-xlarge w3-margin-bottom">
-            <div class="w3-container w3-theme-d5 w3-round-xlarge">
-                <h4>Book a free consultation</h4>
-            </div>
-            <form action="#" method="post" name="lead" class="w3-container w3-padding-16">
-                <label><b>Name</b></label>
-                <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="text" placeholder="Enter your name" name="name" required>
-                <label><b>Mobile number</b></label>
-                <input class="w3-input w3-round-large w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number" name="mobile" required>
-                <label><b>Email id</b></label>
-                <input class="w3-input w3-round-large w3-border" type="email" placeholder="Enter your email" name="email" required>
-                <br>
-                <button class="w3-button w3-round-large w3-theme w3-block" type="submit">Submit</button>
-                <p id="alert" class="w3-theme-l5 w3-container w3-padding-16 w3-round-large w3-small w3-text-theme">Your detail has been submitted and we'll get in touch with you shortly.</p>
-            </form>
         </div>
-        <div style="text-align: left" class="sender-form-field" data-sender-form-id="lnprezvsdnwgnedsyk4"></div>
-      </div>
+
+      {{ template "_internal/pagination.html" . }}
     </div>
+
+    <div class="w3-col s12 m6 l4">
+      {{ partial "capture-lead.html" . }}
+      <div style="text-align: left" class="sender-form-field w3-margin-top" data-sender-form-id="lnprezvsdnwgnedsyk4"></div>
+    </div>
+    
 
   </section>
 

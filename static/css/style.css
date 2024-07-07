@@ -6,18 +6,8 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .overflow-hidden { overflow: hidden; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 .space-between { display: flex; justify-content: space-between; align-items: center; }
-.spinner::before {
-  content: "\f021";
-  display: inline-block;
-  font-family: "FontAwesome";
-  margin-right: 8px;
-  animation: spin 2s infinite linear;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(359deg);}
-}
+.spinner::before { content: "\f021"; display: inline-block; font-family: "FontAwesome"; margin-right: 8px; animation: spin 2s infinite linear; }
+@keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(359deg);} }
 
 .navbar { transition: all 0.5s; padding: 16px; position: sticky; top: 0px; z-index: 9; background-color: #fff; border-radius: 0 0 16px 16px; }
 .navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
@@ -78,19 +68,42 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .recent-blogs-and-signup-form .blogs a { text-decoration: none; }
 .recent-blogs-and-signup-form { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
 
-.footer-wrapper {
-  overflow: hidden;
-  background-color: #0e2954;
-  border-radius: 20px 20px 0 0;
+.footer-wrapper { overflow: hidden; background-color: #0e2954; border-radius: 20px 20px 0 0; }
+.c2l-footer-logo { background-image: url(https://i.ibb.co/HGPnVYs/c2l-logo.png); background-position: center; height: 150px; width: 100%; background-size: cover; }
+
+#request-callback { position: relative; overflow: visible; background-color: transparent; }
+#request-callback .close { position: absolute; right: 0; transform: translate(50%, -50%); }
+
+.blog-layout { padding: 16px; }
+.blog-layout .pagination {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.blog-layout .pagination .page-link {
+  border: 0;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  display: block;
+  display: grid;
+  place-content: center;
+  text-decoration: none;
 }
 
-.c2l-footer-logo {
-  background-image: url(https://i.ibb.co/HGPnVYs/c2l-logo.png);
-  background-position: center;
-  height: 150px;
-  width: 100%;
-  background-size: cover;
-}
+.blog-layout .pagination .page-item { border-radius: 16px; background-color: antiquewhite; }
+.blog-layout .pagination .page-item.active { background-color: #0077b5; color: #fff; cursor: none; transform: scale(1.02); }
+.blog-layout .pagination .page-item.disabled { cursor: not-allowed; background-color: gray; color: #fff; }
+.blog-layout .pagination .page-item.disabled { cursor: not-allowed; background-color: gray; color: #fff; }
+
+.blog-list { display: flex; flex-direction: column; gap: 16px; }
+.blog-list-item { position: relative; }
+.blog-list-item a { text-decoration: none; }
+.blog-list-item img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top; }
+.blog-list-item .reading-time { position: absolute; top: 32px; left: 32px; }
 
 @keyframes blog-header-image-animation {
   from {transform: translateX(0px);}
@@ -116,11 +129,6 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .blog-post a {
   text-decoration: underline;
   color: #3b5998;
-}
-.blog-img-wrapper {
-  height: 150px;
-  overflow: hidden;
-  border-radius: 8px;
 }
 .breadcrumb {
   list-style: none;

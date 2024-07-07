@@ -1,0 +1,55 @@
+<div class="w3-animate-zoom w3-round-xlarge overflow-hidden w3-theme-l5">
+    <div class="w3-container w3-theme">
+        <h3 class="w3-large">Book your free consultation</h3>
+    </div>
+    <form action="#" method="post" name="lead">
+        <div class="w3-container w3-padding-16">
+            <label><b>Name</b></label>
+            <input class="w3-input w3-round w3-border w3-margin-bottom" type="text" placeholder="Enter your name"
+                name="name" required>
+            <label><b>Mobile number</b></label>
+            <input class="w3-input w3-round w3-border w3-margin-bottom" type="tel" placeholder="Enter your phone number"
+                name="mobile" required>
+            <label><b>Email id</b></label>
+            <input class="w3-input w3-round w3-border" type="email" placeholder="Enter your email" name="email"
+                required>
+            <p id="alert" class="w3-theme-d5 w3-container w3-padding-16 w3-round-large w3-small w3-hide">Thanks. We'll get in touch with you shortly.</p>
+        </div>
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+            <button class="w3-button w3-round w3-theme w3-right" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function getUUID() {
+        let uuid = localStorage.getItem("uuid");
+        if (uuid === null || uuid.length != 36) {
+            uuid = crypto.randomUUID();
+            localStorage.setItem("uuid", uuid);
+        }
+        return uuid;
+    }
+
+    document.querySelectorAll("form[name=lead]").forEach(f => {
+        f.addEventListener('submit', ev => {
+            ev.preventDefault();
+            let btn = ev.target.querySelector("button[type=submit]");
+            btn.classList.add("spinner");
+            let data = Object.fromEntries(new FormData(ev.currentTarget));
+            data.uuid = getUUID();
+            fetch("https://c2l.thespj.workers.dev/lead", {
+                method: "POST",
+                body: JSON.stringify(data)
+            }).catch(console.error).finally(r => {
+                btn.classList.remove("spinner");
+                ev.target.querySelectorAll("#alert").forEach(element => element.classList.remove("w3-hide"));
+                setTimeout(() => {
+                    ev.target.querySelectorAll("#alert").forEach(element => element.classList.add("w3-hide"));
+                    ev.target.querySelectorAll("input").forEach(element => element.value = "");
+                }, 5000);
+            })
+        });
+    });
+
+</script>
