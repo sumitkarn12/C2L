@@ -38,7 +38,7 @@
             btn.classList.add("spinner");
             let data = Object.fromEntries(new FormData(ev.currentTarget));
             data.uuid = getUUID();
-            fetch("https://c2l.thespj.workers.dev/lead", {
+            fetch("https://capture-form-data.deno.dev/c2l", {
                 method: "POST",
                 body: JSON.stringify(data)
             }).catch(console.error).finally(r => {
