@@ -1,7 +1,10 @@
 <ul class="w3-ul w3-border w3-round-xxlarge overflow-hidden recent-blogs w3-animate-zoom">
   <li class="w3-theme w3-center w3-padding-16">You should read these too</li>
+  {{ if not (.Page.Scratch.Get "blog-list-count") }}
+  {{ .Page.Scratch.Set "blog-list-count" 10 }}
+  {{ end }}
   {{ $current_page := .RelPermalink }}
-  {{ range first 8 (where .Site.AllPages "Section" "posts") }}
+  {{ range first (.Page.Scratch.Get "blog-list-count") (where .Site.AllPages "Section" "posts") }}
     {{ if eq .Section "posts" }}
       {{ if .IsPage }}
         {{if ne $current_page .RelPermalink}}

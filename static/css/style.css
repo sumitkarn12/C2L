@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .spinner::before { content: "\f021"; display: inline-block; font-family: "FontAwesome"; margin-right: 8px; animation: spin 2s infinite linear; }
 @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(359deg);} }
 
-.navbar { transition: all 0.5s; padding: var(--gap); position: sticky; top: 0px; z-index: 9; background-color: #fff; border-radius: 0 0 16px 16px; }
+.navbar { transition: all 0.5s; padding: var(--gap); position: sticky; top: 0px; z-index: 9; background-color: #ffffffbd; border-radius: 0 0 16px 16px; backdrop-filter: blur(12px); }
 .navbar .nav-logo, .navbar .nav-button { height: 62px; width: 62px; }
 
 .w3-sidebar { display: none; width: 70%; right: 0; top:0; z-index: 99; overflow: visible; }

@@ -7,6 +7,8 @@
     {{ partial "index/whypartner.html" . }}
     {{ partial "index/challenges.html" . }}
     {{ partial "index/solutions.html" . }}
+
+    {{ .Page.Scratch.Set "blog-list-count" 8 }}
     {{ partial "index/blog-list.html" . }}
     
 </div>
