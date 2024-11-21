@@ -9,11 +9,19 @@
 <div id="sidebar" class="w3-sidebar w3-animate-right">
 	<button class="w3-button w3-sidebar-closer w3-xlarge w3-theme w3-circle"><i class="fa fa-close"></i></button>
 	<div class="w3-sidebar-content w3-xlarge">
+		<!--
 		{{ $currentPage := .RelPermalink }}
 		{{ if ne $currentPage "/" }} <a href="/" class='w3-button w3-round-large menu w3-theme'>Home</a> {{ end }}
 		{{ range .Site.Sections }}
-			{{ if ne $currentPage "/blogs" }}<a href="{{.RelPermalink}}" class="w3-button w3-round-large menu w3-theme">{{ .Title }}</a>{{ end }}
+			{{ if ne $currentPage .RelPermalink }}<a href="{{.RelPermalink}}" class="w3-button w3-round-large menu w3-theme">{{ .Title }}</a>{{ end }}
 		{{ end }}
+		-->
+		
+		<a href="/" class='w3-button w3-round-large menu w3-theme'>Home</a>
+		<a href="/about" class='w3-button w3-round-large menu w3-theme'>About us</a>
+		<a href="/services" class='w3-button w3-round-large menu w3-theme'>Services</a>
+		<a href="/privacy" class='w3-button w3-round-large menu w3-theme'>Privacy policy</a>
+		<a href="/contact" class='w3-button w3-round-large menu w3-theme'>Contact</a>		
 	</div>
 </div>
 
