@@ -6,7 +6,7 @@ menu:
     nav:
         parent: services
 image:
-    url: "https://i.ibb.co/RCX3WPX/business-development.webp"
+    url: "https://cometolife.odoo.com/web/image/website.library_image_11"
     alt: "Grow business with our service"
 ---
 
