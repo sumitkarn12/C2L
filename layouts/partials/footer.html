@@ -29,6 +29,8 @@
     <div class="w3-col s12 m4 w3-container w3-padding w3-text-white w3-hide-small">
       <p class="w3-large w3-text-white">Links</p>
 
+      <!--
+
       {{ range (.Site.Sections.ByWeight).Reverse }}
         {{ range .Pages }}
           {{ if ne .Section "posts" }}
@@ -37,8 +39,14 @@
         {{ end }}
       {{ end }}
       <a href="/privacy" class="w3-block w3-margin-bottom">Privacy</a>
-  
-      <!-- <a href="/posts" class="w3-margin-bottom">Blog</a> -->
+      <a href="/posts" class="w3-margin-bottom">Blog</a> -->
+      
+		<a href="/" class='w3-block w3-margin-bottom'>Home</a>
+		<a href="/about" class='w3-block w3-margin-bottom'>About us</a>
+		<a href="/services/our-services" class='w3-block w3-margin-bottom'>Services</a>
+		<a href="/privacy" class='w3-block w3-margin-bottom'>Privacy policy</a>
+		<a href="/contact" class='w3-block w3-margin-bottom'>Contact</a>	
+      
     </div>
 
 
