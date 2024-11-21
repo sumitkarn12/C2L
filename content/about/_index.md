@@ -7,9 +7,9 @@ image:
     alt: "An about us section of C2L to know who we are"
 ---
 
-## About Us - C2L (Come to Life)
+## About Us - C2L (Come to life)
 
-Welcome to **C2L - Come to Life**, your one-stop solution for comprehensive seller account management in the UAE. As the digital frontier continues to evolve, the eCommerce landscape has become the heart and soul of business success, especially on recognized platforms like Amazon, Noon, and various other esteemed e-commerce hubs.
+Welcome to **C2L - Come to life**, your one-stop solution for comprehensive seller account management in the UAE. As the digital frontier continues to evolve, the eCommerce landscape has become the heart and soul of business success, especially on recognized platforms like Amazon, Noon, and various other esteemed e-commerce hubs.
 
 Founded with a vision to revolutionize the online selling experience, C2L bridges the gap between ambition and realization. We understand the unique challenges that online marketplace sellers face in the competitive UAE market. That’s why our specialized suite of services is tailored to take care of everything - right from the intricate process of onboarding to the crucial moments of order fulfillment.
 
@@ -23,6 +23,6 @@ Founded with a vision to revolutionize the online selling experience, C2L bridge
 
 4. **Cultural Insight**: The UAE marketplace is vibrant, diverse, and dynamic. Our team possesses an innate understanding of local trends, preferences, and customs, positioning your business for optimal resonance with your target audience.
 
-In the heart of our ethos lies a passion for bringing businesses to life in the digital realm. At C2L, we believe that with the right partner by your side, any dream can **Come to Life**. Whether you are an established brand aiming to expand your digital footprint or a budding entrepreneur setting foot in the world of eCommerce, our tailored solutions in seller account management are crafted to propel you towards unparalleled success.
+In the heart of our ethos lies a passion for bringing businesses to life in the digital realm. At C2L, we believe that with the right partner by your side, any dream can **Come to life**. Whether you are an established brand aiming to expand your digital footprint or a budding entrepreneur setting foot in the world of eCommerce, our tailored solutions in seller account management are crafted to propel you towards unparalleled success.
 
-Let us be the catalyst to your online marketplace success. Dive into the future of eCommerce with **C2L - Come to Life**. Together, let's redefine the horizon of online selling in the UAE.
+Let us be the catalyst to your online marketplace success. Dive into the future of eCommerce with **C2L - Come to life**. Together, let's redefine the horizon of online selling in the UAE.
