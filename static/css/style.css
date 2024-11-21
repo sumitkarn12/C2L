@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 
 .hero {
 	min-height: calc(100svh - 194px);
-	background-image: url(//i.ibb.co/41FtsVT/brooke-cagle-WHWYBmtn3-0-unsplash.webp);
+	background-image: url(/images/header_banner.webp);
 	background-color: #333;
 	background-position: bottom;
 	background-repeat: no-repeat;
@@ -72,7 +72,7 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
 .recent-blogs-and-signup-form { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr)); }
 
 .footer-wrapper { overflow: hidden; background-color: #0e2954; border-radius: 20px 20px 0 0; }
-.c2l-footer-logo { background-image: url(https://i.ibb.co/HGPnVYs/c2l-logo.png); background-position: center; height: 150px; width: 100%; background-size: cover; }
+.c2l-footer-logo { background-image: url(/images/c2l-logo.png); background-position: center; height: 150px; width: 100%; background-size: cover; }
 
 #request-callback { position: relative; overflow: visible; background-color: transparent; }
 #request-callback .close { position: absolute; right: 0; transform: translate(50%, -50%); }
