@@ -12,7 +12,7 @@
 		{{ $currentPage := .RelPermalink }}
 		{{ if ne $currentPage "/" }} <a href="/" class='w3-button w3-round-large menu w3-theme'>Home</a> {{ end }}
 		{{ range .Site.Sections }}
-			{{ if ne $currentPage .RelPermalink }}<a href="{{.RelPermalink}}" class="w3-button w3-round-large menu w3-theme">{{ .Title }}</a>{{ end }}
+			{{ if ne $currentPage "/blogs" }}<a href="{{.RelPermalink}}" class="w3-button w3-round-large menu w3-theme">{{ .Title }}</a>{{ end }}
 		{{ end }}
 	</div>
 </div>
